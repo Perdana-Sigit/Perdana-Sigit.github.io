@@ -238,6 +238,21 @@
            Each paper is a separate <article> block in the HTML below.
            ============================================================ */
 
+        .publication-intro {
+            margin: -4px 0 18px;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .corrigendum-note {
+            margin: 14px 0 0;
+            padding: 11px 14px;
+            border-left: 3px solid var(--accent);
+            border-radius: 4px;
+            background: var(--accent-light);
+            font-size: 13px;
+        }
+
         .publication-list {
             display: grid;
             gap: 14px;
@@ -371,12 +386,6 @@
                 regional distributional impacts, energy transitions,
                 and integrated assessment and economic modelling.
             </p>
-
-            <!-- Remove this draft note when all publications are added. -->
-            <div class="draft-note">
-                Draft page: five representative papers are displayed below.
-                Additional publications will be added after reviewing their metadata.
-            </div>
         </section>
 
         <!-- ========================================================
@@ -511,6 +520,11 @@
         <section aria-labelledby="publications-title">
             <h2 class="section-heading" id="publications-title">Publications</h2>
 
+            <p class="publication-intro">
+                19 research publications, organised by year and research theme.
+                The ETS-2 corrigendum is linked to its original article.
+            </p>
+
             <div class="publication-toolbar">
                 <div class="filter-buttons" role="group" aria-label="Filter publications by research theme">
                     <button class="filter-button" type="button" data-filter="all" aria-pressed="true">All</button>
@@ -530,26 +544,33 @@
                 </label>
             </div>
 
-            <p class="result-count" id="result-count" aria-live="polite">5 publications shown</p>
+            <p class="result-count" id="result-count" aria-live="polite">19 publications shown</p>
 
             <div class="publication-list" id="publication-list">
 
                 <!-- ==================================================
-                     PUBLICATION 19 (2026)
-                     To add a paper, COPY an entire <article> block.
-                     Update the year, data-themes, title, authors,
-                     journal, summary, DOI, and tags.
+                     PUBLICATION 19
+                     Edit only the fields inside this article block.
                      ================================================== -->
 
-                <article class="publication-card" data-year="2026" data-themes="trade climate">
+                <article
+                    class="publication-card"
+                    data-year="2026"
+                    data-themes="trade climate"
+                >
+
                     <div class="publication-meta">
                         <span>Review of World Economics</span>
                         <span>2026</span>
                     </div>
 
-                    <h3>Trade war to cooperation: scrutinizing China’s strategies to the EU carbon border adjustment mechanism</h3>
+                    <h3>
+                        Trade war to cooperation: scrutinizing China’s strategies to the EU carbon border adjustment mechanism
+                    </h3>
 
-                    <p class="authors">Sigit Perdana, Marc Vielle, and Ru Li</p>
+                    <p class="authors">
+                        Sigit Perdana, Marc Vielle, and Ru Li
+                    </p>
 
                     <p class="paper-summary">
                         Examines China’s potential responses to the EU CBAM,
@@ -562,20 +583,40 @@
                     </div>
 
                     <p class="paper-links">
-                        <a href="https://doi.org/10.1007/s10290-026-00635-6" target="_blank" rel="noopener noreferrer">Read paper / DOI →</a>
+                        <a
+                            href="https://doi.org/10.1007/s10290-026-00635-6"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Read paper / DOI →
+                        </a>
                     </p>
+
                 </article>
 
-                <!-- PUBLICATION 18 (2026) -->
-                <article class="publication-card" data-year="2026" data-themes="regional modelling">
+                <!-- ==================================================
+                     PUBLICATION 18
+                     Edit only the fields inside this article block.
+                     ================================================== -->
+
+                <article
+                    class="publication-card"
+                    data-year="2026"
+                    data-themes="regional modelling"
+                >
+
                     <div class="publication-meta">
                         <span>Environmental Research: Energy</span>
                         <span>2026</span>
                     </div>
 
-                    <h3>Assessing regional exposure to the European energy transition using principal component analysis</h3>
+                    <h3>
+                        Assessing regional exposure to the European energy transition using principal component analysis
+                    </h3>
 
-                    <p class="authors">Sigit Perdana, Albane Sautier, and Marc Vielle</p>
+                    <p class="authors">
+                        Sigit Perdana, Albane Sautier, and Marc Vielle
+                    </p>
 
                     <p class="paper-summary">
                         Develops a multidimensional exposure index
@@ -588,20 +629,358 @@
                     </div>
 
                     <p class="paper-links">
-                        <a href="https://doi.org/10.1088/2753-3751/ae375e" target="_blank" rel="noopener noreferrer">Read paper / DOI →</a>
+                        <a
+                            href="https://doi.org/10.1088/2753-3751/ae375e"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Read paper / DOI →
+                        </a>
+                    </p>
+
+                </article>
+
+                <!-- ==================================================
+                     PUBLICATION 17
+                     Edit only the fields inside this article block.
+                     ================================================== -->
+
+                <article
+                    class="publication-card"
+                    data-year="2026"
+                    data-themes="regional climate"
+                >
+                    <div class="publication-meta">
+                        <span>Energy Policy</span>
+                        <span>2026</span>
+                    </div>
+
+                    <h3>
+                        Regional inequality of the European ETS-2
+                    </h3>
+
+                    <p class="authors">
+                        Sigit Perdana and Marc Vielle
+                    </p>
+
+                    <p class="paper-summary">
+                        Combines household expenditure data, economic modelling, and spatial analysis to assess ETS-2 burdens across 1,160 European regions. Low-income and rural households are particularly exposed, highlighting the importance of regionally targeted measures under the Social Climate Fund.
+                    </p>
+
+                    <div class="tags">
+                        <span class="tag">Regional Impacts</span>
+                        <span class="tag">Climate Policy</span>
+                    </div>
+
+                    <p class="paper-links">
+                        <a
+                            href="https://doi.org/10.1016/j.enpol.2025.114891"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Read paper / DOI →
+                        </a>
+                    </p>
+                    <!-- Correction notice: linked to paper 17, not a separate research article. -->
+                    <p class="corrigendum-note">
+                        <strong>Corrigendum (2026):</strong>
+                        Updated results and figures are available in the
+                        <a
+                            href="https://doi.org/10.1016/j.enpol.2025.115023"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            published corrigendum
+                        </a>.
+                        The main conclusions remain unchanged.
+                    </p>
+
+                </article>
+
+                <!-- ==================================================
+                     PUBLICATION 16
+                     Edit only the fields inside this article block.
+                     ================================================== -->
+
+                <article
+                    class="publication-card"
+                    data-year="2025"
+                    data-themes="regional trade"
+                >
+                    <div class="publication-meta">
+                        <span>Renewable and Sustainable Energy Transition</span>
+                        <span>2025</span>
+                    </div>
+
+                    <h3>
+                        Industrial European regions at risk within the Fit for 55: How far implementing CBAM can mitigate?
+                    </h3>
+
+                    <p class="authors">
+                        Sigit Perdana and Marc Vielle
+                    </p>
+
+                    <p class="paper-summary">
+                        Assesses regional employment effects of the EU Fit for 55 package and carbon border adjustment. CBAM helps reduce employment exposure in energy-intensive industries, but certain regions remain vulnerable to transition-related job losses.
+                    </p>
+
+                    <div class="tags">
+                        <span class="tag">Regional Impacts</span>
+                        <span class="tag">Trade &amp; CBAM</span>
+                    </div>
+
+                    <p class="paper-links">
+                        <a
+                            href="https://doi.org/10.1016/j.rset.2024.100088"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Read paper / DOI →
+                        </a>
                     </p>
                 </article>
 
-                <!-- PUBLICATION 10 (2023) -->
-                <article class="publication-card" data-year="2023" data-themes="energy">
+                <!-- ==================================================
+                     PUBLICATION 15
+                     Edit only the fields inside this article block.
+                     ================================================== -->
+
+                <article
+                    class="publication-card"
+                    data-year="2024"
+                    data-themes="energy climate modelling"
+                >
+                    <div class="publication-meta">
+                        <span>Communications Earth &amp; Environment</span>
+                        <span>2024</span>
+                    </div>
+
+                    <h3>
+                        The impacts of decarbonization pathways on Sustainable Development Goals in the European Union
+                    </h3>
+
+                    <p class="authors">
+                        Jorge Moreno et al. (including Sigit Perdana and Marc Vielle)
+                    </p>
+
+                    <p class="paper-summary">
+                        Uses nine climate policy models to evaluate how EU decarbonisation pathways interact with the Sustainable Development Goals. Ambitious mitigation can improve health and agricultural productivity while requiring complementary policies to address risks for poverty, hunger, and economic growth.
+                    </p>
+
+                    <div class="tags">
+                        <span class="tag">Energy Transition</span>
+                        <span class="tag">Climate Policy</span>
+                        <span class="tag">Modelling</span>
+                    </div>
+
+                    <p class="paper-links">
+                        <a
+                            href="https://doi.org/10.1038/s43247-024-01309-7"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Read paper / DOI →
+                        </a>
+                    </p>
+                </article>
+
+                <!-- ==================================================
+                     PUBLICATION 14
+                     Edit only the fields inside this article block.
+                     ================================================== -->
+
+                <article
+                    class="publication-card"
+                    data-year="2023"
+                    data-themes="energy modelling climate"
+                >
+                    <div class="publication-meta">
+                        <span>Joule</span>
+                        <span>2023</span>
+                    </div>
+
+                    <h3>
+                        A multi-model analysis of the EU’s path to net zero
+                    </h3>
+
+                    <p class="authors">
+                        Baptiste Boitier et al. (including Sigit Perdana and Marc Vielle)
+                    </p>
+
+                    <p class="paper-summary">
+                        Compares seven energy-economic models to assess pathways from the EU Fit for 55 targets to climate neutrality by 2050. The analysis points to near-complete power-sector decarbonisation by 2040 and rapid deployment of renewable energy, electrification, and other mitigation options.
+                    </p>
+
+                    <div class="tags">
+                        <span class="tag">Energy Transition</span>
+                        <span class="tag">Modelling</span>
+                        <span class="tag">Climate Policy</span>
+                    </div>
+
+                    <p class="paper-links">
+                        <a
+                            href="https://doi.org/10.1016/j.joule.2023.11.002"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Read paper / DOI →
+                        </a>
+                    </p>
+                </article>
+
+                <!-- ==================================================
+                     PUBLICATION 13
+                     Edit only the fields inside this article block.
+                     ================================================== -->
+
+                <article
+                    class="publication-card"
+                    data-year="2023"
+                    data-themes="trade climate"
+                >
+                    <div class="publication-meta">
+                        <span>Climate Policy</span>
+                        <span>2023</span>
+                    </div>
+
+                    <h3>
+                        The EU carbon border adjustment mechanism: implications on Brazilian energy intensive industries
+                    </h3>
+
+                    <p class="authors">
+                        Sigit Perdana, Marc Vielle, and Thais Diniz Oliveira
+                    </p>
+
+                    <p class="paper-summary">
+                        Examines the implications of the EU CBAM for Brazil under alternative climate and trade scenarios. Brazil’s relatively low-carbon energy-intensive production may gain trade competitiveness, although sectoral advantages do not necessarily eliminate economy-wide welfare costs.
+                    </p>
+
+                    <div class="tags">
+                        <span class="tag">Trade &amp; CBAM</span>
+                        <span class="tag">Climate Policy</span>
+                    </div>
+
+                    <p class="paper-links">
+                        <a
+                            href="https://doi.org/10.1080/14693062.2023.2277405"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Read paper / DOI →
+                        </a>
+                    </p>
+                </article>
+
+                <!-- ==================================================
+                     PUBLICATION 12
+                     Edit only the fields inside this article block.
+                     ================================================== -->
+
+                <article
+                    class="publication-card"
+                    data-year="2023"
+                    data-themes="climate modelling energy"
+                >
+                    <div class="publication-meta">
+                        <span>Nature Climate Change</span>
+                        <span>2023</span>
+                    </div>
+
+                    <h3>
+                        A multimodel analysis of post-Glasgow climate targets and feasibility challenges
+                    </h3>
+
+                    <p class="authors">
+                        Dirk-Jan van de Ven et al. (including Sigit Perdana and Marc Vielle)
+                    </p>
+
+                    <p class="paper-summary">
+                        Uses four integrated assessment models to assess emissions and temperature implications of countries’ post-COP26 pledges. Long-term net-zero pledges can bring projected warming below 2°C, but delivering them requires substantial technological deployment and raises feasibility and cost concerns.
+                    </p>
+
+                    <div class="tags">
+                        <span class="tag">Climate Policy</span>
+                        <span class="tag">Modelling</span>
+                        <span class="tag">Energy Transition</span>
+                    </div>
+
+                    <p class="paper-links">
+                        <a
+                            href="https://doi.org/10.1038/s41558-023-01661-0"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Read paper / DOI →
+                        </a>
+                    </p>
+                </article>
+
+                <!-- ==================================================
+                     PUBLICATION 11
+                     Edit only the fields inside this article block.
+                     ================================================== -->
+
+                <article
+                    class="publication-card"
+                    data-year="2023"
+                    data-themes="trade climate"
+                >
+                    <div class="publication-meta">
+                        <span>Environmental Economics and Policy Studies</span>
+                        <span>2023</span>
+                    </div>
+
+                    <h3>
+                        Carbon border adjustment mechanism in the transition to net-zero emissions: collective implementation and distributional impacts
+                    </h3>
+
+                    <p class="authors">
+                        Sigit Perdana and Marc Vielle
+                    </p>
+
+                    <p class="paper-summary">
+                        Models joint CBAM implementation by the EU, United States, and China as a potential climate-club arrangement. Coordinated implementation reduces carbon leakage and improves competitiveness and welfare within the coalition relative to unilateral or no-CBAM alternatives.
+                    </p>
+
+                    <div class="tags">
+                        <span class="tag">Trade &amp; CBAM</span>
+                        <span class="tag">Climate Policy</span>
+                    </div>
+
+                    <p class="paper-links">
+                        <a
+                            href="https://doi.org/10.1007/s10018-023-00361-5"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Read paper / DOI →
+                        </a>
+                    </p>
+                </article>
+
+                <!-- ==================================================
+                     PUBLICATION 10
+                     Edit only the fields inside this article block.
+                     ================================================== -->
+
+                <article
+                    class="publication-card"
+                    data-year="2023"
+                    data-themes="energy"
+                >
+
                     <div class="publication-meta">
                         <span>Energy Strategy Reviews</span>
                         <span>2023</span>
                     </div>
 
-                    <h3>Expert perceptions of game-changing innovations towards net zero</h3>
+                    <h3>
+                        Expert perceptions of game-changing innovations towards net zero
+                    </h3>
 
-                    <p class="authors">Sigit Perdana et al.</p>
+                    <p class="authors">
+                        Sigit Perdana et al.
+                    </p>
 
                     <p class="paper-summary">
                         Uses an international expert survey to examine
@@ -613,20 +992,84 @@
                     </div>
 
                     <p class="paper-links">
-                        <a href="https://doi.org/10.1016/j.esr.2022.101022" target="_blank" rel="noopener noreferrer">Read paper / DOI →</a>
+                        <a
+                            href="https://doi.org/10.1016/j.esr.2022.101022"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Read paper / DOI →
+                        </a>
+                    </p>
+
+                </article>
+
+                <!-- ==================================================
+                     PUBLICATION 09
+                     Edit only the fields inside this article block.
+                     ================================================== -->
+
+                <article
+                    class="publication-card"
+                    data-year="2022"
+                    data-themes="energy modelling climate"
+                >
+                    <div class="publication-meta">
+                        <span>Energy Strategy Reviews</span>
+                        <span>2022</span>
+                    </div>
+
+                    <h3>
+                        European economic impacts of cutting energy imports from Russia: A computable general equilibrium analysis
+                    </h3>
+
+                    <p class="authors">
+                        Sigit Perdana, Marc Vielle, and Maxime Schenckery
+                    </p>
+
+                    <p class="paper-summary">
+                        Uses a global computable general equilibrium model to assess EU restrictions on Russian fossil-fuel imports in the context of Fit for 55. Extending the embargo to natural gas substantially raises European welfare costs and reshapes energy use and electricity generation.
+                    </p>
+
+                    <div class="tags">
+                        <span class="tag">Energy Transition</span>
+                        <span class="tag">Modelling</span>
+                        <span class="tag">Climate Policy</span>
+                    </div>
+
+                    <p class="paper-links">
+                        <a
+                            href="https://doi.org/10.1016/j.esr.2022.101006"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Read paper / DOI →
+                        </a>
                     </p>
                 </article>
 
-                <!-- PUBLICATION 08 (2022) -->
-                <article class="publication-card" data-year="2022" data-themes="trade climate">
+                <!-- ==================================================
+                     PUBLICATION 08
+                     Edit only the fields inside this article block.
+                     ================================================== -->
+
+                <article
+                    class="publication-card"
+                    data-year="2022"
+                    data-themes="trade climate"
+                >
+
                     <div class="publication-meta">
                         <span>Energy Policy</span>
                         <span>2022</span>
                     </div>
 
-                    <h3>Making the EU Carbon Border Adjustment Mechanism acceptable and climate friendly for least developed countries</h3>
+                    <h3>
+                        Making the EU Carbon Border Adjustment Mechanism acceptable and climate friendly for least developed countries
+                    </h3>
 
-                    <p class="authors">Sigit Perdana and Marc Vielle</p>
+                    <p class="authors">
+                        Sigit Perdana and Marc Vielle
+                    </p>
 
                     <p class="paper-summary">
                         Evaluates complementary policies that can
@@ -639,20 +1082,259 @@
                     </div>
 
                     <p class="paper-links">
-                        <a href="https://doi.org/10.1016/j.enpol.2022.113245" target="_blank" rel="noopener noreferrer">Read paper / DOI →</a>
+                        <a
+                            href="https://doi.org/10.1016/j.enpol.2022.113245"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Read paper / DOI →
+                        </a>
+                    </p>
+
+                </article>
+
+                <!-- ==================================================
+                     PUBLICATION 07
+                     Edit only the fields inside this article block.
+                     ================================================== -->
+
+                <article
+                    class="publication-card"
+                    data-year="2022"
+                    data-themes="energy modelling climate"
+                >
+                    <div class="publication-meta">
+                        <span>One Earth</span>
+                        <span>2022</span>
+                    </div>
+
+                    <h3>
+                        COVID-19 recovery packages can benefit climate targets and clean energy jobs, but scale of impacts and optimal investment portfolios differ among major economies
+                    </h3>
+
+                    <p class="authors">
+                        Dirk-Jan van de Ven et al. (including Sigit Perdana and Marc Vielle)
+                    </p>
+
+                    <p class="paper-summary">
+                        Combines three energy-economy models with investment portfolio analysis across six major emitting regions. Recovery packages with a substantial share of solar photovoltaics investment can support both emissions reductions and employment, although outcomes vary by model and region.
+                    </p>
+
+                    <div class="tags">
+                        <span class="tag">Energy Transition</span>
+                        <span class="tag">Modelling</span>
+                        <span class="tag">Climate Policy</span>
+                    </div>
+
+                    <p class="paper-links">
+                        <a
+                            href="https://doi.org/10.1016/j.oneear.2022.08.008"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Read paper / DOI →
+                        </a>
                     </p>
                 </article>
 
-                <!-- PUBLICATION 02 (2021) -->
-                <article class="publication-card" data-year="2021" data-themes="modelling climate">
+                <!-- ==================================================
+                     PUBLICATION 06
+                     Edit only the fields inside this article block.
+                     ================================================== -->
+
+                <article
+                    class="publication-card"
+                    data-year="2022"
+                    data-themes="energy modelling"
+                >
+                    <div class="publication-meta">
+                        <span>La Revue de l’Énergie</span>
+                        <span>2022</span>
+                    </div>
+
+                    <h3>
+                        Impact d’un embargo sur les importations russes d’énergie en Europe
+                    </h3>
+
+                    <p class="authors">
+                        Sigit Perdana, Maxime Schenckery, and Marc Vielle
+                    </p>
+
+                    <p class="paper-summary">
+                        Uses macroeconomic modelling to examine the costs of a European embargo on Russian energy imports within the Fit for 55 context. The findings highlight higher energy supply costs and substantial adjustments in natural gas consumption and electricity production.
+                    </p>
+
+                    <div class="tags">
+                        <span class="tag">Energy Transition</span>
+                        <span class="tag">Modelling</span>
+                    </div>
+
+                    <p class="paper-links">
+                        <a
+                            href="https://www.larevuedelenergie.com/impact-dun-embargo-sur-les-importations-russes-denergie-en-europe/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Read journal article →
+                        </a>
+                    </p>
+                </article>
+
+                <!-- ==================================================
+                     PUBLICATION 05
+                     Edit only the fields inside this article block.
+                     ================================================== -->
+
+                <article
+                    class="publication-card"
+                    data-year="2021"
+                    data-themes="climate modelling energy"
+                >
+                    <div class="publication-meta">
+                        <span>Nature Climate Change</span>
+                        <span>2021</span>
+                    </div>
+
+                    <h3>
+                        A multi-model analysis of long-term emissions and warming implications of current mitigation efforts
+                    </h3>
+
+                    <p class="authors">
+                        Ida Sognnaes et al. (including Sigit Perdana and Marc Vielle)
+                    </p>
+
+                    <p class="paper-summary">
+                        Projects long-term emissions and warming based on current policies and mitigation pledges using seven integrated assessment models. The study finds large differences between model trajectories and concludes that even its most optimistic continuation of current efforts is insufficient to hold warming to 2°C.
+                    </p>
+
+                    <div class="tags">
+                        <span class="tag">Climate Policy</span>
+                        <span class="tag">Modelling</span>
+                        <span class="tag">Energy Transition</span>
+                    </div>
+
+                    <p class="paper-links">
+                        <a
+                            href="https://doi.org/10.1038/s41558-021-01206-3"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Read paper / DOI →
+                        </a>
+                    </p>
+                </article>
+
+                <!-- ==================================================
+                     PUBLICATION 04
+                     Edit only the fields inside this article block.
+                     ================================================== -->
+
+                <article
+                    class="publication-card"
+                    data-year="2021"
+                    data-themes="climate trade modelling"
+                >
+                    <div class="publication-meta">
+                        <span>Mitigation and Adaptation Strategies for Global Change</span>
+                        <span>2021</span>
+                    </div>
+
+                    <h3>
+                        Potential integration of Chinese and European emissions trading market: welfare distribution analysis
+                    </h3>
+
+                    <p class="authors">
+                        Ru Li, Sigit Perdana, and Marc Vielle
+                    </p>
+
+                    <p class="paper-summary">
+                        Uses the GEMINI-E3 computable general equilibrium model to assess economic outcomes of linking EU and Chinese emissions trading schemes. Market integration lowers overall mitigation welfare costs, but gains differ across EU member states and industrial sectors.
+                    </p>
+
+                    <div class="tags">
+                        <span class="tag">Climate Policy</span>
+                        <span class="tag">Trade &amp; CBAM</span>
+                        <span class="tag">Modelling</span>
+                    </div>
+
+                    <p class="paper-links">
+                        <a
+                            href="https://doi.org/10.1007/s11027-021-09960-7"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Read paper / DOI →
+                        </a>
+                    </p>
+                </article>
+
+                <!-- ==================================================
+                     PUBLICATION 03
+                     Edit only the fields inside this article block.
+                     ================================================== -->
+
+                <article
+                    class="publication-card"
+                    data-year="2021"
+                    data-themes="climate modelling energy"
+                >
                     <div class="publication-meta">
                         <span>Science of the Total Environment</span>
                         <span>2021</span>
                     </div>
 
-                    <h3>Challenges in the harmonisation of global integrated assessment models: A comprehensive methodology to reduce model response heterogeneity</h3>
+                    <h3>
+                        Where is the EU headed given its current climate policy? A stakeholder-driven model inter-comparison
+                    </h3>
 
-                    <p class="authors">Sara Giarola, Shivika Mittal, Marc Vielle, Sigit Perdana et al.</p>
+                    <p class="authors">
+                        Alexandros Nikas et al. (including Sigit Perdana and Marc Vielle)
+                    </p>
+
+                    <p class="paper-summary">
+                        Compares eleven models under scenarios developed from stakeholder concerns to explore Europe’s likely direction if current climate policies continue. The model results suggest the EU is not on track to meet its more ambitious 2030 target without stronger action.
+                    </p>
+
+                    <div class="tags">
+                        <span class="tag">Climate Policy</span>
+                        <span class="tag">Modelling</span>
+                        <span class="tag">Energy Transition</span>
+                    </div>
+
+                    <p class="paper-links">
+                        <a
+                            href="https://doi.org/10.1016/j.scitotenv.2021.148549"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Read paper / DOI →
+                        </a>
+                    </p>
+                </article>
+
+                <!-- ==================================================
+                     PUBLICATION 02
+                     Edit only the fields inside this article block.
+                     ================================================== -->
+
+                <article
+                    class="publication-card"
+                    data-year="2021"
+                    data-themes="modelling climate"
+                >
+
+                    <div class="publication-meta">
+                        <span>Science of the Total Environment</span>
+                        <span>2021</span>
+                    </div>
+
+                    <h3>
+                        Challenges in the harmonisation of global integrated assessment models: A comprehensive methodology to reduce model response heterogeneity
+                    </h3>
+
+                    <p class="authors">
+                        Sara Giarola, Shivika Mittal, Marc Vielle, Sigit Perdana et al.
+                    </p>
 
                     <p class="paper-summary">
                         Introduces harmonisation steps that help reduce
@@ -665,15 +1347,59 @@
                     </div>
 
                     <p class="paper-links">
-                        <a href="https://doi.org/10.1016/j.scitotenv.2021.146861" target="_blank" rel="noopener noreferrer">Read paper / DOI →</a>
+                        <a
+                            href="https://doi.org/10.1016/j.scitotenv.2021.146861"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Read paper / DOI →
+                        </a>
                     </p>
+
                 </article>
 
                 <!-- ==================================================
-                     ADD THE REMAINING 14 RESEARCH ARTICLES HERE.
-                     Corrigendum 17A will be linked under article 17,
-                     rather than counted as an independent research paper.
+                     PUBLICATION 01
+                     Edit only the fields inside this article block.
                      ================================================== -->
+
+                <article
+                    class="publication-card"
+                    data-year="2020"
+                    data-themes="climate modelling"
+                >
+                    <div class="publication-meta">
+                        <span>The Energy Journal</span>
+                        <span>2020</span>
+                    </div>
+
+                    <h3>
+                        Global climate change mitigation: strategic incentives
+                    </h3>
+
+                    <p class="authors">
+                        Sigit Perdana and Rod Tyers
+                    </p>
+
+                    <p class="paper-summary">
+                        Combines a global dynamic general equilibrium model with strategic multiplayer games to assess incentives for climate change mitigation. The analysis examines unilateral gains, free-riding, and whether international transfers could encourage wider cooperation.
+                    </p>
+
+                    <div class="tags">
+                        <span class="tag">Climate Policy</span>
+                        <span class="tag">Modelling</span>
+                    </div>
+
+                    <p class="paper-links">
+                        <a
+                            href="https://doi.org/10.5547/01956574.41.3.sper"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Read paper / DOI →
+                        </a>
+                    </p>
+                </article>
 
             </div>
         </section>
@@ -725,6 +1451,7 @@
         function sortPublications() {
             const oldestFirst = sortSelect.value === "oldest";
 
+            // If years are equal, keep the paper sequence in the HTML.
             const sortedCards = [...publicationCards].sort((cardA, cardB) => {
                 const yearA = Number(cardA.dataset.year);
                 const yearB = Number(cardB.dataset.year);
