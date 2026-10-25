@@ -130,6 +130,80 @@ nav a {
     text-decoration: none;
 }
 
+/* ==========================================
+   PRIMARY NAVIGATION
+   Publications is a separate page.
+   ========================================== */
+
+nav a:not(.nav-publications) {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 0;
+}
+
+nav a:not(.nav-publications):hover {
+    color: #163e73;
+    text-decoration: underline;
+}
+
+nav .nav-publications {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    border: 1px solid #b7cee7;
+    border-radius: 7px;
+    background: #eaf2fb;
+    color: #164d87;
+    font-weight: 700;
+    white-space: nowrap;
+    transition: background-color 160ms ease, border-color 160ms ease;
+}
+
+nav .nav-publications::after {
+    content: "\2192";
+    font-size: 16px;
+    line-height: 1;
+}
+
+nav .nav-publications:hover {
+    background: #daeafb;
+    border-color: #8db2d9;
+}
+
+/* ==========================================
+   PROFILE LINK TO RESEARCH PUBLICATIONS
+   ========================================== */
+
+.profile-publications-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 11px 17px;
+    border-radius: 7px;
+    background: #213d68;
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    line-height: 1.35;
+    transition: background-color 160ms ease;
+}
+
+.profile-publications-link::after {
+    content: "\2192";
+    font-size: 19px;
+    line-height: 1;
+}
+
+.profile-publications-link:hover {
+    background: #31598c;
+    color: white;
+}
+
+.profile-publications-action {
+    margin: 20px 0 0;
+}
+
 section {
     margin-bottom: 38px;
     scroll-margin-top: 25px;
@@ -328,29 +402,31 @@ footer {
     </ul>
    </aside>
    <main class="main">
-    <!-- Navigation menu: edit links here -->
-   <nav aria-label="Page navigation">
-     <a href="#about">
-      About
-     </a>
-     <a href="#focus">
-      Research focus
-     </a>
-     <a href="#projects">
-      Projects
-     </a>
-     <a href="#experience">
-      Experience
-     </a>
-     <a href="#education">
-      Education
-     </a>
-     <a href="#research">
-      Research &amp; code
-     </a>
-     <a href="publications.html">
-      Research Publications
-     </a>
+    <!-- ==========================================
+         MAIN NAVIGATION
+         Edit section links here.
+         Publications opens a separate HTML page.
+         ========================================== -->
+    <nav aria-label="Main navigation">
+        <a href="#about">
+            About
+        </a>
+        <a href="#focus">
+            Research
+        </a>
+        <a href="#projects">
+            Projects
+        </a>
+        <a href="#experience">
+            Experience
+        </a>
+        <a
+            class="nav-publications"
+            href="publications.html"
+            aria-label="Publications — opens the research publications page"
+        >
+            Publications
+        </a>
     </nav>
     <section id="about">
      <h2>
@@ -361,7 +437,17 @@ footer {
      </p>
      <p>
       My work examines carbon pricing, including the EU ETS and CBAM, energy transition pathways, trade policy, and regional economic impacts.
-I deliver quantitative economic insights for international organisations, government advisory, and academic research.
+      I deliver quantitative economic insights for international organisations, government advisory, and academic research.
+     </p>
+    
+     <!-- Direct link to the separate publications page -->
+     <p class="profile-publications-action">
+         <a
+             class="profile-publications-link"
+             href="publications.html"
+         >
+             Explore My Publications
+         </a>
      </p>
     </section>
     <section id="focus">
