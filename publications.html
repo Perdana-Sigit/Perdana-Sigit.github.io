@@ -138,48 +138,74 @@
 
         /* ============================================================
            4. FEATURED RESEARCH FIGURES
-           Images are separate PNG files in research_figures/.
+           Each theme has one full-width figure, with no cropping.
+           Original PNG files belong in the research_figures/ folder.
            ============================================================ */
 
         .featured-grid {
             display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 18px;
+            grid-template-columns: minmax(0, 1fr);
+            gap: 26px;
         }
 
         .figure-card {
-            padding: 18px;
+            margin: 0;
+            padding: clamp(16px, 3vw, 28px);
             background: var(--surface);
             border: 1px solid var(--border);
             border-radius: 12px;
             box-shadow: var(--shadow);
         }
 
-        .figure-card h3 {
+        .figure-category {
             margin: 0 0 8px;
-            font-size: 16px;
+            color: var(--accent);
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 1.5;
+            letter-spacing: 0.055em;
+            text-transform: uppercase;
+        }
+
+        .figure-card h3 {
+            margin: 0 0 18px;
+            font-size: clamp(19px, 2.3vw, 25px);
             line-height: 1.35;
+        }
+
+        .figure-image-link {
+            display: block;
+            cursor: zoom-in;
         }
 
         .figure-card img {
             display: block;
             width: 100%;
-            height: 240px;
+            height: auto;
             object-fit: contain;
             background: white;
             border: 1px solid var(--border);
             border-radius: 7px;
         }
 
-        .figure-card figcaption {
-            margin-top: 10px;
-            color: var(--muted);
-            font-size: 12px;
+        .figure-card .insight {
+            margin: 18px 0 0;
+            color: var(--text);
+            font-size: 15px;
+            line-height: 1.75;
         }
 
-        .figure-card .insight {
-            margin: 10px 0 0;
+        .figure-card figcaption {
+            margin-top: 12px;
+            color: var(--muted);
             font-size: 13px;
+            line-height: 1.65;
+        }
+
+        .figure-zoom-hint {
+            margin: 8px 0 0;
+            color: var(--muted);
+            font-size: 12px;
         }
 
         /* ============================================================
@@ -341,11 +367,6 @@
                 grid-template-columns: 1fr;
             }
 
-            .figure-card img {
-                height: auto;
-                max-height: 310px;
-            }
-
             .publication-meta {
                 flex-direction: column;
                 gap: 0;
@@ -390,122 +411,227 @@
 
         <!-- ========================================================
              10. FEATURED FIGURES
-             To replace a figure: change ONLY its img src value.
-             To edit a caption: change ONLY the figcaption text.
+             One featured figure per theme.
+             Image filenames remain unchanged for GitHub Pages.
+             Figure title, explanation, and DOI can be edited in each block.
              ======================================================== -->
 
         <section aria-labelledby="featured-title">
             <h2 class="section-heading" id="featured-title">Research Highlights</h2>
 
             <div class="featured-grid">
+                <!-- ==================================================
+                     FEATURED FIGURE 1: CLIMATE POLICY
+                     File: research_figures/climate_policy.png
+                     ================================================== -->
 
-                <!-- FIGURE 1: CLIMATE POLICY -->
                 <figure class="figure-card">
-                    <h3>Climate Policy &amp; International Cooperation</h3>
+                    <p class="figure-category">CLIMATE POLICY · FEATURED RESEARCH</p>
 
-                    <img
-                        src="research_figures/climate_policy.png"
-                        alt="Welfare implications of linking Chinese and European emissions trading markets"
-                        loading="lazy"
+                    <h3>Climate Policy and Sustainable Development</h3>
+
+                    <a
+                        class="figure-image-link"
+                        href="research_figures/climate_policy.png"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Open full-size figure: Climate Policy and Sustainable Development"
                     >
+                        <img
+                            src="research_figures/climate_policy.png"
+                            alt="Radial comparison of Sustainable Development Goal indicators under EU decarbonisation pathways and 2050 scenarios."
+                            loading="lazy"
+                            decoding="async"
+                        >
+                    </a>
+
+                    <p class="figure-zoom-hint">Click the figure to view it at full resolution.</p>
 
                     <p class="insight">
-                        Linking the EU and Chinese carbon markets changes
-                        the distribution of economic welfare across EU countries.
+                        This figure illustrates how alternative EU decarbonisation pathways shape progress towards the Sustainable Development Goals by 2050. It highlights the multidimensional consequences of climate action, revealing both synergies and trade-offs across economic, social, and environmental indicators.
                     </p>
 
                     <figcaption>
-                        Figure 5, Li, Perdana &amp; Vielle (2021).
-                        <a href="https://doi.org/10.1007/s11027-021-09960-7" target="_blank" rel="noopener noreferrer">Source paper</a>.
-                        CC BY 4.0. Figure cropped from published PDF.
+                        Source: Moreno et al. (2024), Figure 2.
+                        <a
+                            href="https://doi.org/10.1038/s43247-024-01309-7"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Original publication
+                        </a>.
                     </figcaption>
                 </figure>
 
-                <!-- FIGURE 2: TRADE AND CBAM -->
-                <figure class="figure-card">
-                    <h3>International Trade &amp; CBAM</h3>
+                <!-- ==================================================
+                     FEATURED FIGURE 2: TRADE AND CBAM
+                     File: research_figures/trade_cbam.png
+                     ================================================== -->
 
-                    <img
-                        src="research_figures/trade_cbam.png"
-                        alt="Comparison of CBAM revenue redistribution policy options"
-                        loading="lazy"
+                <figure class="figure-card">
+                    <p class="figure-category">TRADE &amp; CBAM · FEATURED RESEARCH</p>
+
+                    <h3>Carbon Border Policies and International Trade</h3>
+
+                    <a
+                        class="figure-image-link"
+                        href="research_figures/trade_cbam.png"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Open full-size figure: Carbon Border Policies and International Trade"
                     >
+                        <img
+                            src="research_figures/trade_cbam.png"
+                            alt="Conceptual diagram showing economic transmission channels of carbon border adjustment between the European Union and China."
+                            loading="lazy"
+                            decoding="async"
+                        >
+                    </a>
+
+                    <p class="figure-zoom-hint">Click the figure to view it at full resolution.</p>
 
                     <p class="insight">
-                        Alternative ways to redistribute CBAM revenue
-                        can affect welfare and mitigation outcomes for developing countries.
+                        This figure illustrates the economic transmission channels of the EU Carbon Border Adjustment Mechanism between the European Union and China. It highlights how carbon pricing and border measures can influence trade competitiveness, production, consumption, and economic welfare.
                     </p>
 
                     <figcaption>
-                        Figure 3, Perdana &amp; Vielle (2022).
-                        <a href="https://doi.org/10.1016/j.enpol.2022.113245" target="_blank" rel="noopener noreferrer">Source paper</a>.
-                        CC BY 4.0. Figure cropped from published PDF.
+                        Source: Perdana, Vielle &amp; Li (2026), Figure 3.
+                        <a
+                            href="https://doi.org/10.1007/s10290-026-00635-6"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Original publication
+                        </a>.
                     </figcaption>
                 </figure>
 
-                <!-- FIGURE 3: REGIONAL IMPACTS -->
-                <figure class="figure-card">
-                    <h3>Regional &amp; Distributional Impacts</h3>
+                <!-- ==================================================
+                     FEATURED FIGURE 3: REGIONAL IMPACTS
+                     File: research_figures/regional_impacts.png
+                     ================================================== -->
 
-                    <img
-                        src="research_figures/regional_impacts.png"
-                        alt="European NUTS-2 regional exposure to the energy transition"
-                        loading="lazy"
+                <figure class="figure-card">
+                    <p class="figure-category">REGIONAL &amp; DISTRIBUTIONAL IMPACTS · FEATURED RESEARCH</p>
+
+                    <h3>Mapping Regional Vulnerability in Europe’s Energy Transition</h3>
+
+                    <a
+                        class="figure-image-link"
+                        href="research_figures/regional_impacts.png"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Open full-size figure: Mapping Regional Vulnerability in Europe’s Energy Transition"
                     >
+                        <img
+                            src="research_figures/regional_impacts.png"
+                            alt="Map of European NUTS-2 regions shaded in blue according to a PCA-based multidimensional exposure index."
+                            loading="lazy"
+                            decoding="async"
+                        >
+                    </a>
+
+                    <p class="figure-zoom-hint">Click the figure to view it at full resolution.</p>
 
                     <p class="insight">
-                        An exposure index identifies different dimensions
-                        of transition risk across 242 European regions.
+                        This map illustrates the uneven exposure of European regions to the transition towards climate neutrality, using a multidimensional index constructed through principal component analysis. It reveals geographical disparities in fossil-fuel dependence and emissions intensity, highlighting the need for place-sensitive just transition policies.
                     </p>
 
                     <figcaption>
-                        Figure 1, Perdana, Sautier &amp; Vielle (2026).
-                        <a href="https://doi.org/10.1088/2753-3751/ae375e" target="_blank" rel="noopener noreferrer">Source paper</a>.
-                        CC BY 4.0. Figure cropped from published PDF.
+                        Source: Perdana, Sautier &amp; Vielle (2026), Figure 1.
+                        <a
+                            href="https://doi.org/10.1088/2753-3751/ae375e"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Original publication
+                        </a>.
                     </figcaption>
                 </figure>
 
-                <!-- FIGURE 4: ENERGY TRANSITION -->
-                <figure class="figure-card">
-                    <h3>Energy Transition &amp; Decarbonisation</h3>
+                <!-- ==================================================
+                     FEATURED FIGURE 4: ENERGY TRANSITION
+                     File: research_figures/energy_transition.png
+                     ================================================== -->
 
-                    <img
-                        src="research_figures/energy_transition.png"
-                        alt="Expert assessments of game-changing low-carbon innovations"
-                        loading="lazy"
+                <figure class="figure-card">
+                    <p class="figure-category">ENERGY TRANSITION · FEATURED RESEARCH</p>
+
+                    <h3>The Uneven Pace of Europe’s Energy Transition</h3>
+
+                    <a
+                        class="figure-image-link"
+                        href="research_figures/energy_transition.png"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Open full-size figure: The Uneven Pace of Europe’s Energy Transition"
                     >
+                        <img
+                            src="research_figures/energy_transition.png"
+                            alt="Heatmap comparing the speed of CO2 emissions reduction across European sectors under different net-zero scenarios."
+                            loading="lazy"
+                            decoding="async"
+                        >
+                    </a>
+
+                    <p class="figure-zoom-hint">Click the figure to view it at full resolution.</p>
 
                     <p class="insight">
-                        Experts assess the mitigation potential of
-                        technological and non-technological low-carbon innovations.
+                        This figure illustrates how the pace of decarbonisation differs across European economic sectors under alternative net-zero pathways. It highlights the uneven speed of transition, showing that some sectors can decarbonise rapidly while others face more persistent technological and structural constraints.
                     </p>
 
                     <figcaption>
-                        Figure 1, Perdana et al. (2023).
-                        <a href="https://doi.org/10.1016/j.esr.2022.101022" target="_blank" rel="noopener noreferrer">Source paper</a>.
-                        CC BY 4.0. Figure cropped from published PDF.
+                        Source: Boitier et al. (2023), Figure 2, <em>Joule</em>.
+                        <a
+                            href="https://doi.org/10.1016/j.joule.2023.11.002"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Original publication
+                        </a>.
                     </figcaption>
                 </figure>
 
-                <!-- FIGURE 5: INTEGRATED ASSESSMENT -->
-                <figure class="figure-card">
-                    <h3>Integrated Assessment &amp; Economic Modelling</h3>
+                <!-- ==================================================
+                     FEATURED FIGURE 5: INTEGRATED ASSESSMENT
+                     File: research_figures/integrated_assessment.png
+                     ================================================== -->
 
-                    <img
-                        src="research_figures/integrated_assessment.png"
-                        alt="Comparison of projected global emissions across integrated assessment models"
-                        loading="lazy"
+                <figure class="figure-card">
+                    <p class="figure-category">INTEGRATED ASSESSMENT &amp; ECONOMIC MODELLING · FEATURED RESEARCH</p>
+
+                    <h3>Understanding Climate Pathways Through Multiple Models</h3>
+
+                    <a
+                        class="figure-image-link"
+                        href="research_figures/integrated_assessment.png"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Open full-size figure: Understanding Climate Pathways Through Multiple Models"
                     >
+                        <img
+                            src="research_figures/integrated_assessment.png"
+                            alt="Comparison of climate mitigation feasibility concerns and threshold sensitivity across four integrated assessment models."
+                            loading="lazy"
+                            decoding="async"
+                        >
+                    </a>
+
+                    <p class="figure-zoom-hint">Click the figure to view it at full resolution.</p>
 
                     <p class="insight">
-                        Harmonising key assumptions makes comparisons
-                        between different integrated assessment models more meaningful.
+                        This figure compares the feasibility challenges of climate mitigation pathways across four integrated assessment models, highlighting differences in technological, economic, and sectoral constraints. It demonstrates how model structures and underlying assumptions influence the assessment of climate policy feasibility.
                     </p>
 
                     <figcaption>
-                        Figure 3, Giarola et al. (2021).
-                        <a href="https://doi.org/10.1016/j.scitotenv.2021.146861" target="_blank" rel="noopener noreferrer">Source paper</a>.
-                        CC BY 4.0. Figure cropped from published PDF.
+                        Source: van de Ven et al. (2023), Figure 3, <em>Nature Climate Change</em>.
+                        <a
+                            href="https://doi.org/10.1038/s41558-023-01661-0"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Original publication
+                        </a>.
                     </figcaption>
                 </figure>
 
@@ -569,7 +695,7 @@
                     </h3>
 
                     <p class="authors">
-                        Sigit Perdana, Marc Vielle, and Ru Li
+                        <strong>Sigit Perdana</strong>, Marc Vielle, and Ru Li
                     </p>
 
                     <p class="paper-summary">
@@ -615,7 +741,7 @@
                     </h3>
 
                     <p class="authors">
-                        Sigit Perdana, Albane Sautier, and Marc Vielle
+                        <strong>Sigit Perdana</strong>, Albane Sautier, and Marc Vielle
                     </p>
 
                     <p class="paper-summary">
@@ -660,7 +786,7 @@
                     </h3>
 
                     <p class="authors">
-                        Sigit Perdana and Marc Vielle
+                        <strong>Sigit Perdana</strong> and Marc Vielle
                     </p>
 
                     <p class="paper-summary">
@@ -717,7 +843,7 @@
                     </h3>
 
                     <p class="authors">
-                        Sigit Perdana and Marc Vielle
+                        <strong>Sigit Perdana</strong> and Marc Vielle
                     </p>
 
                     <p class="paper-summary">
@@ -760,7 +886,7 @@
                     </h3>
 
                     <p class="authors">
-                        Jorge Moreno et al. (including Sigit Perdana and Marc Vielle)
+                        Jorge Moreno et al. (including <strong>Sigit Perdana</strong>)
                     </p>
 
                     <p class="paper-summary">
@@ -804,7 +930,7 @@
                     </h3>
 
                     <p class="authors">
-                        Baptiste Boitier et al. (including Sigit Perdana and Marc Vielle)
+                        Baptiste Boitier et al. (including <strong>Sigit Perdana</strong>)
                     </p>
 
                     <p class="paper-summary">
@@ -848,7 +974,7 @@
                     </h3>
 
                     <p class="authors">
-                        Sigit Perdana, Marc Vielle, and Thais Diniz Oliveira
+                        <strong>Sigit Perdana</strong>, Marc Vielle, and Thais Diniz Oliveira
                     </p>
 
                     <p class="paper-summary">
@@ -891,7 +1017,7 @@
                     </h3>
 
                     <p class="authors">
-                        Dirk-Jan van de Ven et al. (including Sigit Perdana and Marc Vielle)
+                        Dirk-Jan van de Ven et al. (including <strong>Sigit Perdana</strong>)
                     </p>
 
                     <p class="paper-summary">
@@ -935,7 +1061,7 @@
                     </h3>
 
                     <p class="authors">
-                        Sigit Perdana and Marc Vielle
+                        <strong>Sigit Perdana</strong> and Marc Vielle
                     </p>
 
                     <p class="paper-summary">
@@ -979,7 +1105,7 @@
                     </h3>
 
                     <p class="authors">
-                        Sigit Perdana et al.
+                        <strong>Sigit Perdana</strong> et al.
                     </p>
 
                     <p class="paper-summary">
@@ -1023,7 +1149,7 @@
                     </h3>
 
                     <p class="authors">
-                        Sigit Perdana, Marc Vielle, and Maxime Schenckery
+                        <strong>Sigit Perdana</strong>, Marc Vielle, and Maxime Schenckery
                     </p>
 
                     <p class="paper-summary">
@@ -1068,7 +1194,7 @@
                     </h3>
 
                     <p class="authors">
-                        Sigit Perdana and Marc Vielle
+                        <strong>Sigit Perdana</strong> and Marc Vielle
                     </p>
 
                     <p class="paper-summary">
@@ -1113,7 +1239,7 @@
                     </h3>
 
                     <p class="authors">
-                        Dirk-Jan van de Ven et al. (including Sigit Perdana and Marc Vielle)
+                        Dirk-Jan van de Ven et al. (including <strong>Sigit Perdana</strong>)
                     </p>
 
                     <p class="paper-summary">
@@ -1157,7 +1283,7 @@
                     </h3>
 
                     <p class="authors">
-                        Sigit Perdana, Maxime Schenckery, and Marc Vielle
+                        <strong>Sigit Perdana</strong>, Maxime Schenckery, and Marc Vielle
                     </p>
 
                     <p class="paper-summary">
@@ -1200,7 +1326,7 @@
                     </h3>
 
                     <p class="authors">
-                        Ida Sognnaes et al. (including Sigit Perdana and Marc Vielle)
+                        Ida Sognnaes et al. (including <strong>Sigit Perdana</strong>)
                     </p>
 
                     <p class="paper-summary">
@@ -1244,7 +1370,7 @@
                     </h3>
 
                     <p class="authors">
-                        Ru Li, Sigit Perdana, and Marc Vielle
+                        Ru Li, <strong>Sigit Perdana</strong>, and Marc Vielle
                     </p>
 
                     <p class="paper-summary">
@@ -1288,7 +1414,7 @@
                     </h3>
 
                     <p class="authors">
-                        Alexandros Nikas et al. (including Sigit Perdana and Marc Vielle)
+                        Alexandros Nikas et al. (including <strong>Sigit Perdana</strong>)
                     </p>
 
                     <p class="paper-summary">
@@ -1333,7 +1459,7 @@
                     </h3>
 
                     <p class="authors">
-                        Sara Giarola, Shivika Mittal, Marc Vielle, Sigit Perdana et al.
+                        Sara Giarola, Shivika Mittal, Marc Vielle, <strong>Sigit Perdana</strong> et al.
                     </p>
 
                     <p class="paper-summary">
@@ -1378,7 +1504,7 @@
                     </h3>
 
                     <p class="authors">
-                        Sigit Perdana and Rod Tyers
+                        <strong>Sigit Perdana</strong> and Rod Tyers
                     </p>
 
                     <p class="paper-summary">
