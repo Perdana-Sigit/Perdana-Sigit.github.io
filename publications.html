@@ -337,7 +337,84 @@
         }
 
         /* ============================================================
-           7. FOOTER AND MOBILE LAYOUT
+           7. PAGE SECTION LINKS AND ADDITIONAL RESEARCH OUTPUTS
+           New sections are separate from the 19 published papers.
+           ============================================================ */
+
+        .section-links {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 9px 17px;
+            margin-top: 23px;
+            padding-top: 16px;
+            border-top: 1px solid var(--border);
+        }
+
+        .section-links a {
+            font-size: 13px;
+            font-weight: 600;
+            text-underline-offset: 4px;
+        }
+
+        .research-output-section {
+            scroll-margin-top: 30px;
+        }
+
+        .research-output-intro {
+            margin: -4px 0 18px;
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        .research-output-list {
+            display: grid;
+            gap: 14px;
+        }
+
+        .research-output-card {
+            padding: 21px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+        }
+
+        .research-output-meta {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 8px 16px;
+            color: var(--muted);
+            font-size: 12px;
+        }
+
+        .research-output-card h3 {
+            margin: 9px 0 8px;
+            font-size: 19px;
+            line-height: 1.42;
+        }
+
+        .research-output-card .authors {
+            margin: 6px 0;
+        }
+
+        .research-output-card .paper-summary {
+            margin: 12px 0 0;
+            line-height: 1.7;
+        }
+
+        .review-status {
+            padding: 3px 10px;
+            border-radius: 20px;
+            background: var(--accent-light);
+            color: var(--accent);
+            font-size: 11px;
+            font-weight: 700;
+        }
+
+        /* ============================================================
+           8. FOOTER AND MOBILE LAYOUT
            ============================================================ */
 
         .site-footer {
@@ -407,6 +484,15 @@
                 regional distributional impacts, energy transitions,
                 and integrated assessment and economic modelling.
             </p>
+
+            <!-- Jump directly to one of the page's research sections. -->
+            <nav class="section-links" aria-label="Jump to research sections">
+                <a href="#research-highlights">Research Highlights</a>
+                <a href="#peer-reviewed-publications">Peer-Reviewed Publications</a>
+                <a href="#working-papers">Working Papers</a>
+                <a href="#policy-brief">Policy Brief</a>
+                <a href="#phd-dissertation">PhD Dissertation</a>
+            </nav>
         </section>
 
         <!-- ========================================================
@@ -416,7 +502,7 @@
              Figure title, explanation, and DOI can be edited in each block.
              ======================================================== -->
 
-        <section aria-labelledby="featured-title">
+        <section id="research-highlights" aria-labelledby="featured-title">
             <h2 class="section-heading" id="featured-title">Research Highlights</h2>
 
             <div class="featured-grid">
@@ -643,8 +729,8 @@
              The data-filter values correspond to data-themes below.
              ======================================================== -->
 
-        <section aria-labelledby="publications-title">
-            <h2 class="section-heading" id="publications-title">Publications</h2>
+        <section id="peer-reviewed-publications" aria-labelledby="publications-title">
+            <h2 class="section-heading" id="publications-title">Peer-Reviewed Publications</h2>
 
             <p class="publication-intro">
                 19 research publications, organised by year and research theme.
@@ -1529,10 +1615,224 @@
 
             </div>
         </section>
+
+        <!-- ========================================================
+             12. WORKING PAPERS
+             Three manuscripts currently under peer review.
+             No manuscript PDF, journal destination or submission ID.
+             These cards are NOT part of the 19-paper filter.
+             ======================================================== -->
+
+        <section
+            id="working-papers"
+            class="research-output-section"
+            aria-labelledby="working-papers-title"
+        >
+            <h2 class="section-heading" id="working-papers-title">Working Papers</h2>
+
+            <p class="research-output-intro">
+                Ongoing research and manuscripts under peer review.
+            </p>
+
+            <div class="research-output-list">
+
+                <!-- WORKING PAPER 01: EU ETS-2, ESR AND REGIONAL INCIDENCE -->
+                <article class="research-output-card">
+                    <div class="research-output-meta">
+                        <span>Working Paper</span>
+                        <span class="review-status">Under Review</span>
+                    </div>
+
+                    <h3>
+                        Reconciling EU ETS-2 and Effort Sharing under Fit for 55:
+                        Allowance Trading and Regional Incidence
+                    </h3>
+
+                    <p class="authors">
+                        <strong>Sigit Perdana</strong>, Matteo Bertolazzi,
+                        Fang-Hsuan Chen, Albane Sautier, and Marc Vielle
+                    </p>
+
+                    <div class="tags">
+                        <span class="tag">Climate Policy</span>
+                        <span class="tag">Regional Impacts</span>
+                        <span class="tag">Modelling</span>
+                    </div>
+
+                    <p class="paper-summary">
+                        This paper examines how alternative EU ETS-2 and Effort Sharing
+                        arrangements affect carbon pricing, allowance trading, and
+                        economic adjustment across 242 European regions. It finds that
+                        differentiated national burden sharing can redistribute financial
+                        obligations without substantially altering the geographical
+                        distribution of regional economic impacts.
+                    </p>
+                </article>
+
+                <!-- WORKING PAPER 02: STRUCTURAL TRANSITION VULNERABILITY -->
+                <article class="research-output-card">
+                    <div class="research-output-meta">
+                        <span>Working Paper</span>
+                        <span class="review-status">Under Review</span>
+                    </div>
+
+                    <h3>
+                        Beyond Capacity: The Structural Roots of Europe’s
+                        Transition Vulnerability
+                    </h3>
+
+                    <p class="authors">
+                        <strong>Sigit Perdana</strong>, Federica Prioglio, and Marc Vielle
+                    </p>
+
+                    <div class="tags">
+                        <span class="tag">Regional Impacts</span>
+                        <span class="tag">Energy Transition</span>
+                    </div>
+
+                    <p class="paper-summary">
+                        This study investigates how structural exposure and adaptive
+                        capacity jointly shape regional vulnerability to Europe’s
+                        low-carbon transition. It finds that vulnerability is driven
+                        predominantly by inherited carbon-intensive economic structures,
+                        while adaptability plays a secondary but meaningful role in
+                        moderating regional transition risks.
+                    </p>
+                </article>
+
+                <!-- WORKING PAPER 03: REGIONAL ECONOMIC TRAJECTORIES -->
+                <article class="research-output-card">
+                    <div class="research-output-meta">
+                        <span>Working Paper</span>
+                        <span class="review-status">Under Review</span>
+                    </div>
+
+                    <h3>
+                        Renewable Potential amid Fossil-Fuel Legacies?
+                        Regional Economic Trajectories in Europe’s Low-Carbon Transition
+                    </h3>
+
+                    <p class="authors">
+                        <strong>Sigit Perdana</strong>, Fang-Hsuan Chen, and Marc Vielle
+                    </p>
+
+                    <div class="tags">
+                        <span class="tag">Regional Impacts</span>
+                        <span class="tag">Energy Transition</span>
+                        <span class="tag">Modelling</span>
+                    </div>
+
+                    <p class="paper-summary">
+                        This paper analyses how regional economic trajectories evolve
+                        under increasingly stringent carbon pricing across 242 European
+                        regions. It demonstrates that inherited fossil-fuel specialisation
+                        is associated with less favourable adjustment pathways, while
+                        abundant renewable-energy potential does not necessarily
+                        guarantee regional economic benefits.
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- ========================================================
+             13. POLICY BRIEF
+             Link to the official PARIS REINFORCE publication page.
+             ======================================================== -->
+
+        <section
+            id="policy-brief"
+            class="research-output-section"
+            aria-labelledby="policy-brief-title"
+        >
+            <h2 class="section-heading" id="policy-brief-title">Policy Brief</h2>
+
+            <div class="research-output-list">
+                <article class="research-output-card">
+                    <div class="research-output-meta">
+                        <span>PARIS REINFORCE · Horizon 2020</span>
+                        <span>November 2022</span>
+                    </div>
+
+                    <h3>
+                        The EU Carbon Border Adjustment Mechanism towards Net Zero:
+                        Mitigating Adverse Impacts on Least Developed Countries
+                    </h3>
+
+                    <p class="authors">
+                        <strong>Sigit Perdana</strong> and Marc Vielle
+                    </p>
+
+                    <p class="paper-summary">
+                        This policy brief evaluates the implications of the EU Carbon
+                        Border Adjustment Mechanism for least developed countries and
+                        explores complementary measures to mitigate adverse effects.
+                        It highlights how targeted CBAM revenue redistribution towards
+                        renewable energy and household energy efficiency can reduce
+                        carbon leakage while improving economic welfare in vulnerable
+                        trading partners.
+                    </p>
+
+                    <p class="paper-links">
+                        <a
+                            href="https://paris-reinforce.eu/publications/policy-briefs"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Read policy brief on PARIS REINFORCE →
+                        </a>
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- ========================================================
+             14. PHD DISSERTATION
+             Year follows the dissertation's 2018 title page.
+             No PDF or repository URL has been added.
+             ======================================================== -->
+
+        <section
+            id="phd-dissertation"
+            class="research-output-section"
+            aria-labelledby="phd-dissertation-title"
+        >
+            <h2 class="section-heading" id="phd-dissertation-title">PhD Dissertation</h2>
+
+            <div class="research-output-list">
+                <article class="research-output-card">
+                    <div class="research-output-meta">
+                        <span>University of Western Australia · Business School</span>
+                        <span>2018</span>
+                    </div>
+
+                    <h3>Global Carbon Abatement Equilibria: A Reassessment</h3>
+
+                    <p class="authors">
+                        <strong>Sigit Pria Perdana</strong>
+                    </p>
+
+                    <p class="paper-summary">
+                        This dissertation examines the strategic incentives underlying
+                        global carbon abatement through three interconnected studies.
+                        Combining integrated assessment modelling, economic welfare
+                        analysis, and non-cooperative game theory, it investigates
+                        international climate cooperation and free-riding behaviour,
+                        the implications of renewable energy innovation for global
+                        mitigation equilibria, and alternative decarbonisation policies
+                        in Indonesia. The findings highlight how short-term economic
+                        costs constrain international cooperation, how renewable energy
+                        productivity reshapes strategic incentives, and how clean-energy
+                        development can offer Indonesia a more favourable long-term
+                        economic and emissions pathway than unilateral carbon pricing.
+                    </p>
+                </article>
+            </div>
+        </section>
     </main>
 
     <!-- ============================================================
-         12. FOOTER
+         15. FOOTER
          ============================================================ -->
 
     <footer class="site-footer">
@@ -1544,7 +1844,7 @@
     </footer>
 
     <!-- ============================================================
-         13. JAVASCRIPT: FILTER AND SORT
+         16. JAVASCRIPT: FILTER AND SORT
          No need to edit this section when adding a publication.
          ============================================================ -->
 
