@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Selected research contributions of Sigit Perdana: international climate cooperation, economic incidence of carbon regulation, uneven regional adjustment, and carbon-market burden sharing.">
+    <title>Selected Research Contributions | Perdana Sigit</title>
+
+    <style>
+        /* Consistent visual language with the Research Publications page. */
+        :root {
+            --background: #f8fafc;
+            --surface: #ffffff;
+            --text: #183044;
+            --muted: #5d7080;
+            --accent: #176c80;
+            --accent-light: #e9f4f5;
+            --border: #dfe8ed;
+            --shadow: 0 10px 30px rgba(20, 45, 65, 0.05);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font: 16px/1.7 Arial, Helvetica, sans-serif;
+            color: var(--text);
+            background: var(--background);
+        }
+
+        a {
+            color: var(--accent);
+            text-underline-offset: 3px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        a:focus-visible {
+            outline: 3px solid #d9a441;
+            outline-offset: 4px;
+        }
+
+        .container {
+            width: min(1080px, calc(100% - 36px));
+            margin: 0 auto;
+        }
+
+        .site-header {
+            background: var(--surface);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            padding: 19px 0;
+        }
+
+        .site-name {
+            font-size: 19px;
+            font-weight: 700;
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        .site-nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 22px;
+        }
+
+        .site-nav a {
+            color: var(--muted);
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+        .site-nav a[aria-current="page"] {
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        .page-intro {
+            padding: 60px 0 30px;
+            max-width: 825px;
+        }
+
+        .eyebrow {
+            color: var(--accent);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: .11em;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            font-size: clamp(31px, 4.5vw, 47px);
+            line-height: 1.2;
+            margin: 10px 0 17px;
+        }
+
+        .page-intro p {
+            margin: 0 0 11px;
+            color: var(--muted);
+        }
+
+        .section-jump {
+            display: flex;
+            gap: 9px;
+            flex-wrap: wrap;
+            margin: 22px 0 10px;
+        }
+
+        .section-jump a {
+            display: inline-block;
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 7px 12px;
+            color: var(--accent);
+            background: var(--surface);
+            text-decoration: none;
+            font-size: 13px;
+            line-height: 1.4;
+        }
+
+        .section-jump a:hover {
+            background: var(--accent-light);
+        }
+
+        .contributions {
+            display: grid;
+            gap: 22px;
+            padding-bottom: 52px;
+        }
+
+        .contribution {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: clamp(21px, 3.6vw, 35px);
+            box-shadow: var(--shadow);
+            scroll-margin-top: 26px;
+        }
+
+        .number {
+            color: var(--accent);
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .1em;
+        }
+
+        h2 {
+            font-size: clamp(22px, 2.9vw, 27px);
+            line-height: 1.35;
+            margin: 9px 0 18px;
+        }
+
+        .key-insight {
+            background: var(--accent-light);
+            border-left: 3px solid var(--accent);
+            border-radius: 0 7px 7px 0;
+            padding: 14px 18px;
+            margin: 0 0 22px;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 1.55;
+        }
+
+        .contribution p {
+            max-width: 830px;
+            margin: 0 0 16px;
+        }
+
+        .supporting {
+            margin-top: 24px;
+            border-top: 1px solid var(--border);
+            padding-top: 18px;
+        }
+
+        .supporting h3 {
+            margin: 0 0 11px;
+            color: var(--muted);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: .09em;
+            text-transform: uppercase;
+        }
+
+        .supporting ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            gap: 9px;
+        }
+
+        .supporting li {
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.55;
+        }
+
+        .supporting a {
+            font-weight: 600;
+        }
+
+        .status {
+            color: var(--muted);
+            font-size: 12px;
+            font-style: italic;
+        }
+
+        .page-end {
+            padding: 0 0 38px;
+            color: var(--muted);
+        }
+
+        .page-end a {
+            font-weight: 700;
+        }
+
+        .site-footer {
+            background: var(--surface);
+            border-top: 1px solid var(--border);
+            padding: 25px 0;
+            font-size: 13px;
+            color: var(--muted);
+        }
+
+        .footer-inner {
+            display: flex;
+            gap: 16px;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 680px) {
+            .nav-container {
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .site-nav {
+                gap: 12px 18px;
+            }
+
+            .page-intro {
+                padding-top: 36px;
+            }
+        }
+
+        @media print {
+            body {
+                background: #fff;
+            }
+
+            .section-jump, .site-nav {
+                display: none;
+            }
+
+            .contribution {
+                box-shadow: none;
+                break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container nav-container">
+            <a class="site-name" href="index.html">Perdana Sigit</a>
+            <nav class="site-nav" aria-label="Main navigation">
+                <a href="index.html">Home</a>
+                <a href="publications.html">Research Publications</a>
+                <a href="contributions.html" aria-current="page">Selected Contributions</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="page-intro" aria-labelledby="page-title">
+            <div class="eyebrow">Academic Research</div>
+            <h1 id="page-title">Selected Research Contributions</h1>
+            <p>
+                My research examines economic consequences of climate and energy policies that
+                are not always evident from their intended objectives or aggregate outcomes.
+                These three contributions bring together insights from published articles and
+                ongoing work, focusing on the economic mechanisms and differences that matter.
+            </p>
+            <nav class="section-jump" aria-label="Explore contributions">
+                <a href="#international">International interactions</a>
+                <a href="#distribution">Uneven adjustment</a>
+                <a href="#burden-sharing">Financial and real effects</a>
+            </nav>
+        </section>
+
+        <div class="contributions">
+            <section class="contribution" id="international" aria-labelledby="international-title">
+                <div class="number">Contribution 01</div>
+                <h2 id="international-title">International Incentives and Divergent Economic Consequences</h2>
+                <p class="key-insight">
+                    A climate policy can create different incentives and outcomes for trading partners,
+                    industries, and national welfare—even when its environmental objective is shared.
+                </p>
+                <p>
+                    My earlier research on international mitigation cooperation examined why countries
+                    face unequal incentives to act. Under the scenarios considered, the United States
+                    and China can obtain net gains from unilateral mitigation over a long horizon,
+                    while smaller economies retain incentives to free-ride. Short-run costs and
+                    differences in the distribution of benefits help explain why economically
+                    beneficial cooperation may remain difficult to achieve.
+                </p>
+                <p>
+                    Subsequent research on the EU Carbon Border Adjustment Mechanism (CBAM) shows
+                    how the consequences of a common regulation diverge across economies and
+                    economic measures. Brazil's relatively low-carbon energy-intensive industries
+                    may gain trade competitiveness even while the country bears aggregate welfare
+                    costs. For least developed countries, exemptions can improve welfare while
+                    increasing carbon leakage; targeted support for cleaner energy and efficiency
+                    can yield different trade-offs. Research on China's strategic responses similarly
+                    identifies the economic incentives behind retaliation and resource shuffling.
+                </p>
+                <div class="supporting">
+                    <h3>Selected supporting research</h3>
+                    <ul>
+                        <li><a href="https://doi.org/10.5547/01956574.41.3.sper" target="_blank" rel="noopener noreferrer">Perdana &amp; Tyers (2020)</a> · Strategic incentives for global mitigation · <em>The Energy Journal</em></li>
+                        <li><a href="https://doi.org/10.1016/j.enpol.2022.113245" target="_blank" rel="noopener noreferrer">Perdana &amp; Vielle (2022)</a> · CBAM and least developed countries · <em>Energy Policy</em></li>
+                        <li><a href="https://doi.org/10.1080/14693062.2023.2277405" target="_blank" rel="noopener noreferrer">Perdana et al. (2023)</a> · CBAM and Brazilian industries · <em>Climate Policy</em></li>
+                        <li><a href="https://doi.org/10.1007/s10290-026-00635-6" target="_blank" rel="noopener noreferrer">Perdana et al. (2026)</a> · China's CBAM responses · <em>Review of World Economics</em></li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="contribution" id="distribution" aria-labelledby="distribution-title">
+                <div class="number">Contribution 02</div>
+                <h2 id="distribution-title">Uneven Economic Adjustment across Regions and Households</h2>
+                <p class="key-insight">
+                    Similar climate-policy pressures do not lead to similar economic burdens:
+                    initial household circumstances and inherited regional production structures matter.
+                </p>
+                <p>
+                    My research on the EU's second emissions trading system (ETS-2) reveals
+                    distributional patterns that national averages can conceal. Lower-income and
+                    rural households are disproportionately exposed, while regional differences
+                    in housing, transport, fossil-fuel dependence, and access to low-carbon
+                    alternatives help explain unequal burdens. Related research finds that
+                    transition exposure extends beyond coal-producing regions to refining and
+                    port economies, industrial centres, and agricultural regions.
+                </p>
+                <p>
+                    Ongoing research extends the question from <em>where exposure is concentrated</em>
+                    to <em>why vulnerability persists and how regional economies adjust over time</em>.
+                    The emerging findings indicate that inherited carbon-intensive structures
+                    are a stronger determinant of regional vulnerability than differences in
+                    adaptive capacity alone. They also show that substantial renewable-energy
+                    potential does not necessarily translate into favourable regional economic
+                    trajectories. Together, the results emphasise the influence of structural
+                    legacies rather than any single measure of transition readiness.
+                </p>
+                <div class="supporting">
+                    <h3>Selected supporting research</h3>
+                    <ul>
+                        <li><a href="https://doi.org/10.1016/j.enpol.2025.114891" target="_blank" rel="noopener noreferrer">Perdana &amp; Vielle (2026)</a> · Regional inequality of ETS-2 · <em>Energy Policy</em></li>
+                        <li><a href="https://doi.org/10.1088/2753-3751/ae375e" target="_blank" rel="noopener noreferrer">Perdana, Sautier &amp; Vielle (2026)</a> · Regional exposure to the energy transition · <em>Environmental Research: Energy</em></li>
+                        <li><a href="publications.html#working-papers">Perdana, Prioglio &amp; Vielle (2026)</a> · Structural roots of transition vulnerability <span class="status">— manuscript under review</span></li>
+                        <li><a href="publications.html#working-papers">Perdana, Chen &amp; Vielle (2026)</a> · Renewable potential and fossil-fuel legacies <span class="status">— manuscript under review</span></li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="contribution" id="burden-sharing" aria-labelledby="burden-sharing-title">
+                <div class="number">Contribution 03</div>
+                <h2 id="burden-sharing-title">Financial Burden Sharing versus Real Economic Adjustment</h2>
+                <p class="key-insight">
+                    Changing who holds or trades emissions allowances need not change where
+                    production, emissions, and economic adjustment take place.
+                </p>
+                <p>
+                    My research on the potential integration of the Chinese and European
+                    emissions trading markets finds that linking markets can lower overall
+                    mitigation welfare costs while distributing gains unevenly across countries
+                    and industries. This distinguishes the efficiency gains from trading from
+                    their distribution among participants.
+                </p>
+                <p>
+                    My ongoing ETS-2 and Effort Sharing Regulation (ESR) research makes a
+                    further distinction between financial allocation and physical adjustment.
+                    Under the modelled 2030 scenarios, ESR-aligned allowance trading reaches
+                    around 117 MtCO₂-eq, with an implied transaction value of approximately
+                    US$29 billion. Yet alternative allowance arrangements generate almost
+                    identical regional GDP and emissions patterns. This suggests that substantial
+                    reallocations of compliance payments need not relocate underlying economic
+                    adjustment when market prices and real constraints remain similar.
+                </p>
+                <div class="supporting">
+                    <h3>Selected supporting research</h3>
+                    <ul>
+                        <li><a href="https://doi.org/10.1007/s11027-021-09960-7" target="_blank" rel="noopener noreferrer">Li, Perdana &amp; Vielle (2021)</a> · Integration of Chinese and EU emissions trading markets · <em>Mitigation and Adaptation Strategies for Global Change</em></li>
+                        <li><a href="publications.html#working-papers">Perdana et al. (2026)</a> · Reconciling ETS-2 and ESR: allowance trading and regional incidence <span class="status">— manuscript under review; scenario-based findings</span></li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+
+        <div class="page-end">
+            For the full publication record, source figures, and summaries of individual papers,
+            visit <a href="publications.html">Research Publications</a>.
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <span>© Perdana Sigit</span>
+            <span><a href="index.html">Back to Home</a></span>
+        </div>
+    </footer>
+</body>
+</html>
