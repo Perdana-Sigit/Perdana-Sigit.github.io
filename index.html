@@ -6,7 +6,7 @@
   <title>
    Sigit Perdana | Environmental &amp; Energy Economist
   </title>
-  <meta content="Sigit Perdana &mdash; environmental and energy economist specialising in CGE and integrated assessment modelling, climate policy, and regional analysis." name="description"/>
+  <meta content="Sigit Perdana &mdash; environmental and energy economist. Research on climate policy, CGE modelling, regional and distributional impacts, and energy transition." name="description"/>
   <style>
    * {
     box-sizing: border-box;
@@ -130,45 +130,16 @@ nav a {
     text-decoration: none;
 }
 
-/* ==========================================
-   PRIMARY NAVIGATION
-   Publications is a separate page.
-   ========================================== */
-
-nav a:not(.nav-publications) {
+/* Plain text navigation: Profile contains the sole highlighted Publications CTA. */
+nav a {
     display: inline-flex;
     align-items: center;
     padding: 8px 0;
 }
 
-nav a:not(.nav-publications):hover {
+nav a:hover {
     color: #163e73;
     text-decoration: underline;
-}
-
-nav .nav-publications {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 8px 14px;
-    border: 1px solid #b7cee7;
-    border-radius: 7px;
-    background: #eaf2fb;
-    color: #164d87;
-    font-weight: 700;
-    white-space: nowrap;
-    transition: background-color 160ms ease, border-color 160ms ease;
-}
-
-nav .nav-publications::after {
-    content: "\2192";
-    font-size: 16px;
-    line-height: 1;
-}
-
-nav .nav-publications:hover {
-    background: #daeafb;
-    border-color: #8db2d9;
 }
 
 /* ==========================================
@@ -259,6 +230,58 @@ h3 {
     margin-bottom: 0;
 }
 
+
+/* Project links: concise descriptions and consistent external actions. */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 16px;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    border: 1px solid #dce4ef;
+    border-radius: 8px;
+    background: #f4f7fb;
+}
+
+.project-card h3 {
+    color: #213d68;
+}
+
+.project-type {
+    font-size: 13px;
+    color: #637086;
+    margin: 5px 0 12px;
+}
+
+.project-card p:not(.project-type) {
+    margin-bottom: 18px;
+}
+
+.project-action {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: auto;
+    padding: 10px 13px;
+    border-radius: 6px;
+    background: #213d68;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.project-action:hover {
+    background: #31598c;
+    color: #fff;
+}
+
 footer {
     font-size: 12px;
     color: #68788e;
@@ -336,12 +359,12 @@ footer {
     </p>
     <ul class="contacts">
      <li>
+      Lausanne, Switzerland
+     </li>
+     <li>
       <a href="mailto:perdanasigit@gmail.com">
        perdanasigit@gmail.com
       </a>
-     </li>
-     <li>
-      Lausanne, Switzerland
      </li>
      <li>
       <a href="https://www.linkedin.com/in/perdanasigit/">
@@ -417,87 +440,100 @@ footer {
          Publications opens a separate HTML page.
          ========================================== -->
     <nav aria-label="Main navigation">
-        <a href="#about">
-            About
-        </a>
-        <a href="#focus">
-            Research
-        </a>
-        <a href="#projects">
-            Projects
-        </a>
-        <a href="#experience">
-            Experience
-        </a>
-        <a
-            class="nav-publications"
-            href="publications.html"
-            aria-label="Publications — opens the research publications page"
-        >
-            Publications
-        </a>
+     <a href="#about">
+      About
+     </a>
+     <a href="#focus">
+      Research
+     </a>
+     <a href="#projects">
+      Projects
+     </a>
+     <a href="#experience">
+      Experience
+     </a>
+     <a href="publications.html">
+      Publications
+     </a>
     </nav>
     <!-- ==========================================
          PROFILE
          Introduces expertise and policy contribution.
          ========================================== -->
     <section id="about">
-        <h2>
-            Profile
-        </h2>
-        <p>
-            I am an environmental and energy economist specialising in quantitative policy analysis.
-            My research combines economy-wide economic modelling with empirical and spatial methods
-            to assess the economic and distributional consequences of climate and energy policies.
-        </p>
-        <p>
-            My work aims to provide policy-relevant insights that support evidence-based decision-making,
-            particularly for governments, international organisations, and the academic community.
-        </p>
-
-        <!-- Direct link to the separate publications page -->
-        <p class="profile-publications-action">
-            <a
-                class="profile-publications-link"
-                href="publications.html"
-            >
-                Explore My Publications
-            </a>
-        </p>
+     <h2>
+      Profile
+     </h2>
+     <!-- Direct link to the separate publications page -->
+     <p>
+      I am an environmental and energy economist specialising in quantitative policy analysis. My research combines economy-wide economic modelling with empirical and spatial methods to examine the economic and distributional consequences of climate and energy policies.
+     </p>
+     <p>
+      A central motivation of my work is to understand how climate policies reshape economies, why their effects differ across regions and households, and how rigorous economic analysis can inform more effective and equitable policy decisions.
+     </p>
+     <p class="profile-publications-action">
+      <a class="profile-publications-link" href="publications.html">
+       Explore My Publications
+      </a>
+     </p>
     </section>
     <!-- ==========================================
          RESEARCH FOCUS
          Five themes aligned with publications.html.
          ========================================== -->
     <section id="focus">
-        <h2>
-            Research Focus
-        </h2>
-        <p>
-            My research focuses on five interconnected areas:
-        </p>
-        <ul>
-            <li>
-                <strong>Climate Policy:</strong>
-                Carbon pricing, emissions trading, international climate cooperation, and policy effectiveness.
-            </li>
-            <li>
-                <strong>International Trade &amp; CBAM:</strong>
-                Trade competitiveness, carbon leakage, and the economic implications of border carbon adjustments.
-            </li>
-            <li>
-                <strong>Regional &amp; Distributional Impacts:</strong>
-                Regional inequalities, household welfare, employment effects, and just transition policies.
-            </li>
-            <li>
-                <strong>Energy Transition:</strong>
-                Decarbonisation pathways, energy security, and the economic implications of transforming energy systems.
-            </li>
-            <li>
-                <strong>Economic &amp; Integrated Assessment Modelling:</strong>
-                CGE and IAM applications, scenario analysis, and multi-model assessments of climate and energy policies.
-            </li>
-        </ul>
+     <h2>
+      Research Focus
+     </h2>
+     <p>
+      My research focuses on five interconnected areas:
+     </p>
+     <ul>
+      <li>
+       <strong>
+        Climate Policy:
+       </strong>
+       Carbon pricing, emissions trading, international climate cooperation, and policy effectiveness.
+      </li>
+      <li>
+       <strong>
+        International Trade &amp; CBAM:
+       </strong>
+       Trade competitiveness, carbon leakage, and the economic implications of border carbon adjustments.
+      </li>
+      <li>
+       <strong>
+        Regional &amp; Distributional Impacts:
+       </strong>
+       Regional inequalities, household welfare, employment effects, and just transition policies.
+      </li>
+      <li>
+       <strong>
+        Energy Transition:
+       </strong>
+       Decarbonisation pathways, energy security, and the economic implications of transforming energy systems.
+      </li>
+      <li>
+       <strong>
+        Economic &amp; Integrated Assessment Modelling:
+       </strong>
+       CGE and IAM applications, scenario analysis, and multi-model assessments of climate and energy policies.
+      </li>
+     </ul>
+    </section>
+    <section id="vision">
+     <h2>
+      Research Vision
+     </h2>
+     <p>
+      My future research aims to bridge economy-wide climate policy modelling with increasingly detailed representations of regional economies, households, and labour markets.
+     </p>
+     <p>
+      Building on computable general equilibrium and integrated assessment approaches, I seek to develop policy analysis that captures not only aggregate economic adjustments but also the geographical and social distribution of transition costs and opportunities.
+     </p>
+     <p>
+      This agenda connects three areas: climate policy design, economic transformation, and the distributional implications of the energy transition.
+     </p>
     </section>
     <section id="affiliations">
      <h2>
@@ -515,26 +551,61 @@ footer {
     </section>
     <section id="projects">
      <h2>
-      Main projects
+      Projects &amp; Modelling
      </h2>
-     <ul>
-      <li>
-       <strong>
-        <a href="https://climate-diamond.eu/" rel="noopener noreferrer" target="_blank">
-         DIAMOND
-        </a>
-       </strong>
-       &mdash; Horizon Europe
-      </li>
-      <li>
-       <strong>
-        <a href="https://paris-reinforce.eu/" rel="noopener noreferrer" target="_blank">
-         PARIS REINFORCE
-        </a>
-       </strong>
-       &mdash; Horizon 2020
-      </li>
-     </ul>
+     <div class="project-grid">
+      <article class="project-card">
+       <h3>
+        DIAMOND
+       </h3>
+       <p class="project-type">
+        Horizon Europe research project
+       </p>
+       <p>
+        Contributing to integrated assessment of European climate policies, including economy-wide modelling and distributional analysis.
+       </p>
+       <a class="project-action" href="https://climate-diamond.eu/" rel="noopener noreferrer" target="_blank">
+        Explore DIAMOND
+        <span aria-hidden="true">
+         &nearrow;
+        </span>
+       </a>
+      </article>
+      <article class="project-card">
+       <h3>
+        PARIS REINFORCE
+       </h3>
+       <p class="project-type">
+        Horizon 2020 research project
+       </p>
+       <p>
+        Research connecting integrated assessment and economic modelling with climate-policy pathways and their economic implications.
+       </p>
+       <a class="project-action" href="https://paris-reinforce.eu/" rel="noopener noreferrer" target="_blank">
+        Explore PARIS REINFORCE
+        <span aria-hidden="true">
+         &nearrow;
+        </span>
+       </a>
+      </article>
+      <article class="project-card">
+       <h3>
+        GEMINI-E3-EU
+       </h3>
+       <p class="project-type">
+        Economic modelling
+       </p>
+       <p>
+        A recursive-dynamic computable general equilibrium model used to assess European climate and energy policies, sectoral transitions, and distributional impacts.
+       </p>
+       <a class="project-action" href="https://gemini-e3-eu.readthedocs.io/en/latest/" rel="noopener noreferrer" target="_blank">
+        Model Documentation
+        <span aria-hidden="true">
+         &nearrow;
+        </span>
+       </a>
+      </article>
+     </div>
     </section>
     <section id="experience">
      <h2>
@@ -631,7 +702,7 @@ in Economics
        GEMINI-E3-EU
       </h3>
       <p>
-       CGE modelling for climate and energy policy analysis.
+       Technical resources and open-source materials for the GEMINI-E3-EU model.
       </p>
       <p>
        <a href="https://github.com/Perdana-Sigit/GEMINI-E3-EU">
