@@ -220,17 +220,6 @@ h3 {
     font-weight: bold;
 }
 
-.project {
-    background: #f1f5fa;
-    border-left: 3px solid #213d68;
-    padding: 22px;
-}
-
-.project p:last-child {
-    margin-bottom: 0;
-}
-
-
 /* Project links: concise descriptions and consistent external actions. */
 .project-grid {
     display: grid;
@@ -280,6 +269,13 @@ h3 {
 .project-action:hover {
     background: #31598c;
     color: #fff;
+}
+
+.project-repository {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 14px;
+    font-weight: 600;
 }
 
 footer {
@@ -434,11 +430,7 @@ footer {
     </ul>
    </aside>
    <main class="main">
-    <!-- ==========================================
-         MAIN NAVIGATION
-         Edit section links here.
-         Publications opens a separate HTML page.
-         ========================================== -->
+    <!-- Main navigation; publications are linked from the prominent Profile button. -->
     <nav aria-label="Main navigation">
      <a href="#about">
       About
@@ -451,9 +443,6 @@ footer {
      </a>
      <a href="#experience">
       Experience
-     </a>
-     <a href="publications.html">
-      Publications
      </a>
     </nav>
     <!-- ==========================================
@@ -526,13 +515,10 @@ footer {
       Research Vision
      </h2>
      <p>
-      My future research aims to bridge economy-wide climate policy modelling with increasingly detailed representations of regional economies, households, and labour markets.
+      My future research seeks to advance the integration of computable general equilibrium modelling with spatial, household-level, and labour market analysis, enabling a more detailed understanding of economic adjustments during the low-carbon transition.
      </p>
      <p>
-      Building on computable general equilibrium and integrated assessment approaches, I seek to develop policy analysis that captures not only aggregate economic adjustments but also the geographical and social distribution of transition costs and opportunities.
-     </p>
-     <p>
-      This agenda connects three areas: climate policy design, economic transformation, and the distributional implications of the energy transition.
+      I aim to develop modelling frameworks that better connect economy-wide policy assessments with regional and social outcomes, providing a stronger analytical basis for designing climate policies that are both economically effective and socially equitable.
      </p>
     </section>
     <section id="affiliations">
@@ -603,6 +589,9 @@ footer {
         <span aria-hidden="true">
          &nearrow;
         </span>
+       </a>
+       <a class="project-repository" href="https://github.com/Perdana-Sigit/GEMINI-E3-EU" rel="noopener noreferrer" target="_blank">
+        GitHub Repository &nearrow;
        </a>
       </article>
      </div>
@@ -690,28 +679,6 @@ in Economics
       </h3>
       <p class="meta">
        The Australian National University &middot; 2009&ndash;2011
-      </p>
-     </article>
-    </section>
-    <section id="research">
-     <h2>
-      Research &amp; code
-     </h2>
-     <article class="project">
-      <h3>
-       GEMINI-E3-EU
-      </h3>
-      <p>
-       Technical resources and open-source materials for the GEMINI-E3-EU model.
-      </p>
-      <p>
-       <a href="https://github.com/Perdana-Sigit/GEMINI-E3-EU">
-        GitHub repository
-       </a>
-       &middot;
-       <a href="https://gemini-e3-eu.readthedocs.io/en/latest/">
-        Model documentation
-       </a>
       </p>
      </article>
     </section>
