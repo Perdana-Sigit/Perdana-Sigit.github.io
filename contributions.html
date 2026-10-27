@@ -137,6 +137,37 @@
             background: var(--accent-light);
         }
 
+
+        /* Original conceptual framework: responsive image, with full-size view. */
+        .diagram-figure {
+            margin: 0 0 30px;
+            padding: 12px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+        }
+
+        .diagram-figure a {
+            display: block;
+            border-radius: 7px;
+            overflow: hidden;
+        }
+
+        .diagram-figure img {
+            display: block;
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .diagram-figure figcaption {
+            margin: 10px 5px 2px;
+            color: var(--muted);
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
         .contributions {
             display: grid;
             gap: 22px;
@@ -306,6 +337,23 @@
                 <a href="#burden-sharing">Financial and real effects</a>
             </nav>
         </section>
+
+
+        <figure class="diagram-figure" aria-labelledby="diagram-caption">
+            <a href="diagram.png" target="_blank" rel="noopener noreferrer" aria-label="Open conceptual diagram at full resolution">
+                <img
+                    src="diagram.png"
+                    alt="Conceptual diagram with climate and energy policy interventions at the centre, connected to three research contributions: international interactions and divergent outcomes; uneven adjustment across regions and households; and financial burden sharing versus real economic adjustment."
+                    width="1672"
+                    height="941"
+                    loading="lazy"
+                    decoding="async"
+                >
+            </a>
+            <figcaption id="diagram-caption">
+                A conceptual overview of the three research contributions. Click the diagram to view it at full resolution.
+            </figcaption>
+        </figure>
 
         <div class="contributions">
             <section class="contribution" id="international" aria-labelledby="international-title">
