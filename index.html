@@ -130,7 +130,7 @@ nav a {
     text-decoration: none;
 }
 
-/* Plain text navigation: Profile contains the sole highlighted Publications CTA. */
+/* Main navigation links to the four website sections. */
 nav a {
     display: inline-flex;
     align-items: center;
@@ -142,37 +142,9 @@ nav a:hover {
     text-decoration: underline;
 }
 
-/* ==========================================
-   PROFILE LINK TO RESEARCH PUBLICATIONS
-   ========================================== */
-
-.profile-publications-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    padding: 11px 17px;
-    border-radius: 7px;
-    background: #213d68;
-    color: white;
+nav a[aria-current="page"] {
+    color: #213d68;
     font-weight: 700;
-    text-decoration: none;
-    line-height: 1.35;
-    transition: background-color 160ms ease;
-}
-
-.profile-publications-link::after {
-    content: "\2192";
-    font-size: 19px;
-    line-height: 1;
-}
-
-.profile-publications-link:hover {
-    background: #31598c;
-    color: white;
-}
-
-.profile-publications-action {
-    margin: 20px 0 0;
 }
 
 section {
@@ -430,21 +402,13 @@ footer {
     </ul>
    </aside>
    <main class="main">
-    <!-- Main navigation; publications are linked from the prominent Profile button. -->
+    <!-- Consistent four-page website navigation. -->
     <nav aria-label="Main navigation">
-     <a href="#about">
-      About
-     </a>
-     <a href="#focus">
-      Research
-     </a>
-     <a href="#projects">
-      Projects
-     </a>
-     <a href="#experience">
-      Experience
-     </a>
-    </nav>
+      <a href="index.html#about" aria-current="page">About</a>
+      <a href="publications.html">Publications</a>
+      <a href="contributions.html">Research Contributions</a>
+      <a href="perspectives.html">Perspectives</a>
+     </nav>
     <!-- ==========================================
          PROFILE
          Introduces expertise and policy contribution.
@@ -453,17 +417,12 @@ footer {
      <h2>
       Profile
      </h2>
-     <!-- Direct link to the separate publications page -->
+     <!-- Profile introduction; publications are accessible from the main navigation. -->
      <p>
       I am an environmental and energy economist specialising in quantitative policy analysis. My work examines how climate and energy policies affect economic activity and welfare in interconnected economies.
      </p>
      <p>
       My research investigates economic consequences that are not always apparent from a policy’s intended objectives or initial design. I examine adjustments across countries, sectors, regions, households, and trading partners, identifying the mechanisms behind outcomes that may be uneven, unexpected, or insufficiently understood.
-     </p>
-     <p class="profile-publications-action">
-      <a class="profile-publications-link" href="publications.html">
-       Explore My Publications
-      </a>
      </p>
     </section>
     <!-- ==========================================
@@ -509,11 +468,6 @@ footer {
        CGE and IAM applications, scenario analysis, and multi-model assessments of climate and energy policies.
       </li>
      </ul>
-     <p class="profile-publications-action">
-      <a class="profile-publications-link" href="contributions.html">
-       Explore My Research Contributions
-      </a>
-     </p>
     </section>
     <section id="vision">
      <h2>
