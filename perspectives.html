@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Perspectives by Sigit Perdana on the economic consequences of climate and energy policy. Commentary in preparation.">
+    <meta name="description" content="Evidence-based perspectives by Sigit Perdana on EU ETS-2, the Effort Sharing Regulation, CBAM, international trade, and the economic consequences of climate policy.">
     <title>Perspectives | Sigit Perdana</title>
-
     <style>
-        /* Shared visual language with the Publications and Contributions pages. */
+        /* -------------------------------------------------------------
+           Perspectives: original policy commentary, two complete essays.
+           Header/navigation retained from the approved four-page system.
+           ------------------------------------------------------------- */
+        html { scroll-behavior: smooth; }
         :root {
             --background: #f8fafc;
             --surface: #ffffff;
@@ -16,47 +19,24 @@
             --accent: #176c80;
             --accent-light: #e9f4f5;
             --border: #dfe8ed;
-            --shadow: 0 10px 30px rgba(20, 45, 65, 0, 0.05);
+            --shadow: 0 10px 30px rgba(20, 45, 65, 0.05);
+            --navy: #213d68;
         }
-
-        * {
-            box-sizing: border-box;
-        }
-
+        * { box-sizing: border-box; }
         body {
             margin: 0;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-            font: 16px/1.7 Arial, Helvetica, sans-serif;
+            font: 16px/1.72 Arial, Helvetica, sans-serif;
             color: var(--text);
             background: var(--background);
         }
-
-        a {
-            color: var(--accent);
-            text-underline-offset: 3px;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        a:focus-visible {
-            outline: 3px solid #d9a441;
-            outline-offset: 4px;
-        }
-
-        .container {
-            width: min(1080px, calc(100% - 36px));
-            margin: 0 auto;
-        }
-
-        .site-header {
-            background: var(--surface);
-            border-bottom: 1px solid var(--border);
-        }
-
+        a { color: var(--accent); text-underline-offset: 3px; }
+        a:hover { text-decoration: underline; }
+        a:focus-visible { outline: 3px solid #d9a441; outline-offset: 4px; }
+        .container { width: min(1080px, calc(100% - 36px)); margin: 0 auto; }
+        .site-header { background: var(--surface); border-bottom: 1px solid var(--border); }
         .nav-container {
             display: flex;
             justify-content: space-between;
@@ -64,39 +44,42 @@
             gap: 20px;
             padding: 19px 0;
         }
-
         .site-name {
             font-size: 19px;
             font-weight: 700;
             color: var(--text);
             text-decoration: none;
         }
-
-        .site-nav {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 22px;
-        }
-
+        .site-nav { display: flex; flex-wrap: wrap; gap: 10px; }
         .site-nav a {
-            color: var(--muted);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 38px;
+            padding: 8px 14px;
+            border-radius: 999px;
+            border: 1px solid #2d5b92;
+            background: #ffffff;
+            color: #2d5b92;
             font-size: 14px;
+            font-weight: 700;
+            text-decoration: none;
+            line-height: 1.2;
+            transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+        }
+        .site-nav a:hover {
+            background: #eef4fb;
+            color: #163e73;
+            border-color: #163e73;
             text-decoration: none;
         }
-
         .site-nav a[aria-current="page"] {
-            color: var(--accent);
-            font-weight: 700;
+            background: var(--navy);
+            border-color: var(--navy);
+            color: #ffffff;
         }
-
-        main {
-            flex: 1;
-        }
-
-        .intro {
-            padding: 64px 0 32px;
-        }
-
+        main { flex: 1; }
+        .intro { padding: 60px 0 34px; }
         .eyebrow {
             color: var(--accent);
             font-size: 12px;
@@ -104,64 +87,100 @@
             letter-spacing: .11em;
             text-transform: uppercase;
         }
-
         h1 {
-            margin: 11px 0 12px;
+            margin: 12px 0 14px;
             font-size: clamp(32px, 4.5vw, 48px);
-            line-height: 1.2;
+            line-height: 1.18;
+            color: var(--text);
         }
-
-        .intro p {
-            max-width: 750px;
-            margin: 0;
-            color: var(--muted);
+        .intro p { max-width: 780px; margin: 0; color: var(--muted); }
+        .feature-label {
+            margin: 26px 0 12px;
+            padding-top: 19px;
+            border-top: 1px solid var(--border);
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .1em;
+            color: var(--accent);
         }
-
-        .placeholder {
-            max-width: 790px;
-            margin: 8px 0 55px;
-            padding: 24px 27px;
+        .essay-index { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-bottom: 38px; }
+        .index-card {
+            background: var(--surface);
             border: 1px solid var(--border);
             border-radius: 12px;
-            background: var(--surface);
+            padding: 23px 24px 20px;
             box-shadow: var(--shadow);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            min-width: 0;
+            color: var(--text);
+            text-decoration: none;
         }
-
-        .placeholder h2 {
-            margin: 0 0 8px;
-            font-size: 22px;
+        .index-card:hover { border-color: #9cbdca; box-shadow: 0 12px 30px rgba(20,45,65,.09); text-decoration: none; }
+        .index-card .n { color: var(--accent); font-size: 12px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; }
+        .index-card h2 { margin: 10px 0; font-size: 22px; line-height: 1.32; color: var(--text); }
+        .index-card p { margin: 0 0 20px; font-size: 14px; color: var(--muted); }
+        .index-card .more { margin-top: auto; color: #20538b; font-size: 14px; font-weight: 700; }
+        .essay {
+            scroll-margin-top: 28px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            padding: clamp(24px, 4.5vw, 48px);
+            margin: 0 0 30px;
         }
-
-        .placeholder p {
-            margin: 0;
-            color: var(--muted);
+        .essay-topline { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 18px; }
+        .essay-kicker {
+            color: var(--accent);
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .085em;
         }
-
-        .site-footer {
-            padding: 27px 0;
-            border-top: 1px solid var(--border);
-            color: var(--muted);
-            font-size: 13px;
+        .essay-date { color: var(--muted); font-size: 13px; }
+        .essay h2 {
+            max-width: 840px;
+            margin: 13px 0 14px;
+            font-size: clamp(26px, 3.4vw, 34px);
+            line-height: 1.25;
+            color: var(--text);
         }
-
+        .essay-deck { font-size: 17px; line-height: 1.55; color: var(--muted); max-width: 810px; margin: 0 0 13px; }
+        .essay-byline { font-size: 13px; color: var(--muted); margin-bottom: 23px; }
+        .essay-byline span { margin: 0 6px; }
+        .insight { background: var(--accent-light); border-left: 3px solid var(--accent); border-radius: 0 7px 7px 0; padding: 16px 20px; margin: 0 0 25px; font-size: 15px; line-height: 1.6; }
+        .insight strong { display: block; margin-bottom: 4px; color: #1a5364; font-size: 12px; text-transform: uppercase; letter-spacing: .09em; }
+        .essay-body { max-width: 840px; }
+        .essay-body h3 { color: var(--text); font-size: 20px; line-height: 1.4; margin: 29px 0 11px; }
+        .essay-body p { margin: 0 0 17px; line-height: 1.83; }
+        .references { border-top: 1px solid var(--border); padding-top: 23px; margin-top: 29px; }
+        .references h3 { margin: 0 0 5px; color: var(--text); font-size: 17px; }
+        .references-note { color: var(--muted); font-size: 13px; margin: 0 0 14px; max-width: 760px; }
+        .references ol { margin: 0; padding-left: 23px; display: grid; gap: 9px; }
+        .references li { padding-left: 3px; font-size: 14px; line-height: 1.55; }
+        .references li a { font-weight: 650; }
+        .references li span { display: block; color: var(--muted); font-size: 13px; }
+        .essay-end { padding-top: 21px; margin-top: 25px; border-top: 1px solid var(--border); }
+        .essay-end a { font-size: 13px; font-weight: 700; text-decoration: none; }
+        .disclaimer { margin: 10px 0 54px; font-size: 13px; line-height: 1.6; color: var(--muted); }
+        .site-footer { background: var(--surface); border-top: 1px solid var(--border); padding: 27px 0; color: var(--muted); font-size: 13px; }
         @media (max-width: 740px) {
-            .nav-container {
-                align-items: flex-start;
-                flex-direction: column;
-                gap: 10px;
-            }
-
-            .site-nav {
-                gap: 12px 18px;
-            }
-
-            .intro {
-                padding-top: 38px;
-            }
-
-            .placeholder {
-                padding: 20px;
-            }
+            .nav-container { align-items: flex-start; flex-direction: column; gap: 10px; }
+            .site-nav { gap: 9px; }
+            .site-nav a { font-size: 13px; padding: 8px 12px; }
+            .intro { padding: 38px 0 27px; }
+            .essay-index { grid-template-columns: 1fr; }
+            .essay { padding: 24px 20px; }
+            .essay-body p { line-height: 1.76; }
+        }
+        @media print {
+            body { background: #ffffff; }
+            .site-nav, .essay-index, .essay-end { display: none; }
+            .essay { border: 0; box-shadow: none; margin: 0 0 20px; padding: 0; }
+            .references a { color: #183044; }
         }
     </style>
 </head>
@@ -178,22 +197,110 @@
         </div>
     </header>
 
-    <main class="container">
+    <main class="container" id="top">
         <section class="intro" aria-labelledby="page-title">
             <div class="eyebrow">Policy Commentary</div>
             <h1 id="page-title">Perspectives</h1>
-            <p>Evidence-based perspectives on the economic consequences of climate and energy policies.</p>
+            <p>Independent, evidence-based commentary on the economic consequences of climate and energy policies. These essays connect current European policy debates with insights from economic research, without presuming that every analysis must lead to a policy prescription.</p>
+            <div class="feature-label">Two perspectives · October 2026</div>
         </section>
 
-        <!-- Articles will be added here in the next phase. -->
-        <section class="placeholder" aria-label="Editorial status">
-            <h2>In preparation</h2>
-            <p>Commentaries on the EU ETS-2 and the Carbon Border Adjustment Mechanism (CBAM) are being prepared.</p>
-        </section>
+        <nav class="essay-index" aria-label="Choose a perspective">
+            <a class="index-card" href="#ets2">
+                <span class="n">01 · EU ETS-2 &amp; ESR</span>
+                <h2>ETS-2 After Postponement</h2>
+                <p>What a delayed carbon price changes for households, regional economies, and national emissions commitments.</p>
+                <span class="more">Read perspective →</span>
+            </a>
+            <a class="index-card" href="#cbam">
+                <span class="n">02 · EU CBAM</span>
+                <h2>CBAM Beyond Carbon Leakage</h2>
+                <p>How border carbon measures reshape trade, competitiveness, welfare, and incentives beyond Europe.</p>
+                <span class="more">Read perspective →</span>
+            </a>
+        </nav>
+
+<article class="essay" id="ets2" aria-labelledby="ets2-title">
+  <div class="essay-topline">
+    <span class="essay-kicker">Perspective 01 · Policy analysis</span>
+    <span class="essay-date"><time datetime="2026-10-28">28 October 2026</time></span>
+  </div>
+  <h2 id="ets2-title">ETS-2 After Postponement: The Economic Questions That Remain</h2>
+  <p class="essay-deck">A delayed carbon market changes the timetable—but does it change the distribution of costs or the location of economic adjustment?</p>
+  <div class="essay-byline">By Sigit Perdana <span aria-hidden="true">·</span> Approx. 5 min read</div>
+  <p class="insight"><strong>Central argument</strong> A later launch may ease short-term pressure, but the economic incidence of carbon pricing still depends on household constraints, regional infrastructure, and national climate obligations.</p>
+  <div class="essay-body">
+    <p>The European Union has postponed the full operation of its second emissions trading system (ETS-2) from 2027 to 2028. For many households, that decision may seem straightforward: an additional year without a new carbon cost on heating and road fuels. Yet postponement is not the same as removing the economic pressures that motivated the policy. Buildings and transport still require emissions reductions, fuel dependence remains uneven, and Member States continue to face binding obligations under the Effort Sharing Regulation (ESR). The central question is therefore not simply whether the delay is welcome, but what it changes in the allocation of costs, incentives, and adjustment over time.</p>
+    <h3>A different timetable, not an empty policy framework</h3>
+    <p>ETS-2 places compliance obligations on fuel suppliers rather than directly on households or motorists. Those suppliers are expected to pass through some of the allowance cost, though the extent and timing of pass-through will depend on market conditions. The amended European Climate Law postpones full ETS-2 operation to 2028, while early allowance auctions are scheduled for 2027. The institutions have also strengthened the market stability reserve to help address excessive volatility. These safeguards matter, but a mechanism that releases allowances when a price threshold is crossed is not a guaranteed ceiling on the price ultimately paid by consumers.</p>
+    <p>One year can reduce near-term political and financial pressure, especially during a period of concern about living costs. It can also create breathing room for governments to improve compensation and low-carbon alternatives. But a later start can compress the period available for households and firms to respond before the 2030 horizon. If investment in insulation, heating systems, charging infrastructure, and public transport is also postponed, the underlying dependence on fossil fuels will remain. Whether the delay eases adjustment or merely shifts it into a shorter window depends on what happens during the intervening period.</p>
+    <h3>The distributional question is more than income</h3>
+    <p>Carbon pricing is often assessed through national-average household costs or income deciles. These indicators are useful but incomplete. A low-income household in a poorly insulated home may have little scope to reduce heating demand. A rural commuter without reliable transport alternatives cannot respond to a fuel price increase in the same way as an urban resident with accessible public transport. Family composition, dwelling characteristics, and the location of jobs affect exposure as much as income alone.</p>
+    <p>My research on the regional inequality of ETS-2 combines household expenditure patterns with economic and spatial analysis. It identifies disproportionate exposure among lower-income and rural households and substantial variation across European territories. These are model-based distributional findings, not a prediction of the exact bill every household will receive in 2028. They nevertheless highlight an economic mechanism: a common carbon price interacts with unequal initial circumstances, producing heterogeneous welfare effects. A postponement does not erase these differences. It offers an opportunity to address them before the price signal becomes fully operational.</p>
+    <p>The Social Climate Fund is consequently relevant not just as a compensation budget but as a means of altering households&#x27; capacity to adjust. Temporary income support may cushion immediate costs, while more durable investments—building renovation, cleaner heating, or affordable transport—can reduce exposure to future fuel prices. Effective targeting requires more than identifying the lowest national income quintile; it also requires understanding regional infrastructure and the constraints households face in changing consumption.</p>
+    <h3>ETS-2 and ESR: two different layers of responsibility</h3>
+    <p>There is a second issue that receives less public attention. The ESR establishes binding national emissions targets for sectors that overlap substantially with ETS-2, including buildings and road transport. Delaying the new carbon market does not by itself suspend these national commitments. Consequently, the timing of an EU-wide price signal and the distribution of Member State responsibilities need to be considered together rather than treated as separate conversations.</p>
+    <p>In ongoing research on ETS-2 and ESR arrangements, my co-authors and I examine how alternative allowance-allocation rules affect carbon prices, financial exchanges, and regional economic outcomes. The modelled scenarios suggest that changing who bears or trades financial obligations can generate sizeable transfers without greatly relocating the underlying regional adjustments in production and emissions. This is a scenario-specific finding from a manuscript under review, not a forecast for the revised 2028 timetable. Its broader analytical implication is that financial burden sharing and the location of real economic adjustment are distinct questions.</p>
+    <p>The useful test of postponement, then, is not whether it eliminates an unpopular price. It is whether the additional time changes households&#x27; ability to respond, the readiness of supporting infrastructure, and the coherence between national obligations and EU-wide incentives. Those economic outcomes—not the calendar alone—will determine how the costs of the transition are experienced.</p>
+  </div>
+  <div class="references">
+    <h3>Sources &amp; related research</h3>
+    <p class="references-note">Policy facts are drawn from official EU sources; interpretations of economic mechanisms draw on published and ongoing research. Linked studies provide the evidence behind the discussion.</p>
+    <ol>
+      <li><a href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32026R0667" target="_blank" rel="noopener noreferrer">Legal postponement to 2028</a><span>Regulation (EU) 2026/667, Article 2</span></li>
+      <li><a href="https://www.consilium.europa.eu/en/press/press-releases/2026/10/09/ets2-council-signs-off-on-rules-strengthening-the-market-stability-reserve/" target="_blank" rel="noopener noreferrer">Market stability reserve reform</a><span>Council of the EU, 9 October 2026</span></li>
+      <li><a href="https://climate.ec.europa.eu/news-other-reads/news/revised-2027-eu-ets1-and-initial-2027-eu-ets2-auction-calendars-published-2026-10-01_en" target="_blank" rel="noopener noreferrer">Early ETS-2 auction calendar</a><span>European Commission, 1 October 2026</span></li>
+      <li><a href="https://climate.ec.europa.eu/areas-action/effort-sharing-member-states-emission-targets/about-effort-sharing_en" target="_blank" rel="noopener noreferrer">ESR national targets and sectors</a><span>European Commission, Effort Sharing Regulation</span></li>
+      <li><a href="https://doi.org/10.1016/j.enpol.2025.114891" target="_blank" rel="noopener noreferrer">Published research: Regional inequality of the European ETS-2</a><span>Perdana &amp; Vielle, Energy Policy (2026)</span></li>
+      <li><a href="publications.html#working-papers" target="_blank" rel="noopener noreferrer">Ongoing research: ETS-2, ESR and allowance trading</a><span>Perdana et al., manuscript under review</span></li>
+    </ol>
+  </div>
+  <div class="essay-end"><a href="#top">Back to Perspectives ↑</a></div>
+</article>
+
+<article class="essay" id="cbam" aria-labelledby="cbam-title">
+  <div class="essay-topline">
+    <span class="essay-kicker">Perspective 02 · Policy analysis</span>
+    <span class="essay-date"><time datetime="2026-10-28">28 October 2026</time></span>
+  </div>
+  <h2 id="cbam-title">CBAM Beyond Carbon Leakage: Trade, Competitiveness, and Welfare</h2>
+  <p class="essay-deck">Europe’s border carbon measure affects far more than the carbon content of imports. Its effects travel through trade, production, and household welfare.</p>
+  <div class="essay-byline">By Sigit Perdana <span aria-hidden="true">·</span> Approx. 5 min read</div>
+  <p class="insight"><strong>Central argument</strong> A measure can improve the competitiveness of some exporters without increasing national welfare—and trade diversion is not the same as global emissions reduction.</p>
+  <div class="essay-body">
+    <p>The European Union&#x27;s Carbon Border Adjustment Mechanism (CBAM) entered its definitive regime on 1 January 2026. Its central rationale is familiar: if European producers face a carbon price while imports do not, production and emissions may shift to jurisdictions with weaker constraints. CBAM seeks to reduce that risk by attaching a carbon-related obligation to imports of covered goods. But whether this achieves its intended environmental purpose cannot be established simply by observing import prices, trade flows, or revenues. A border measure travels through an interconnected economic system, creating adjustments that can differ sharply across countries, industries, and households.</p>
+    <h3>A carbon price at the border is not a single economic outcome</h3>
+    <p>In its current form, CBAM covers selected carbon-intensive goods including iron and steel, aluminium, cement, fertilisers, electricity, and hydrogen. The compliance system is being introduced alongside the gradual reduction of free allowances for relevant sectors under the EU Emissions Trading System. A simplification adopted in 2025 introduced a 50-tonne annual mass threshold for many smaller importers. While obligations apply to imports made in 2026, certificate purchases on the central platform begin in February 2027, with the first annual compliance deadline in September 2027. These implementation details matter because incentives depend on the timing of cash payments, rules for embedded emissions, and recognition of carbon prices already paid abroad.</p>
+    <p>The mechanism may strengthen the position of relatively low-emission producers serving the EU market. It may also encourage some foreign firms to lower the carbon intensity of production. Neither effect should be confused with a guaranteed reduction in global emissions. Producers can redirect cleaner output towards Europe while supplying more carbon-intensive output elsewhere, a response often described as resource shuffling. Changes in sourcing and trade routes can likewise shift emissions rather than eliminate them. Environmental effectiveness therefore depends on production decisions across markets, not only on emissions embodied in the goods entering the EU.</p>
+    <h3>Competitiveness gains are not welfare gains</h3>
+    <p>Research on CBAM&#x27;s implications for Brazil illustrates a particularly important distinction. Brazil&#x27;s comparatively low-carbon production in certain energy-intensive industries can confer a competitive advantage under an EU border adjustment. Yet improvements in sectoral trade performance need not translate into higher welfare for the whole Brazilian economy. Changes in international prices, resource allocation, and household consumption can offset gains accruing to particular exporters. A country can therefore look like a &#x27;winner&#x27; in one trade indicator while experiencing losses in a broader economic measure.</p>
+    <p>The same divergence appears when considering least developed countries. Exempting vulnerable trading partners may reduce their direct economic burden, but it can weaken incentives against carbon leakage. In related modelling, alternative uses of CBAM revenue—including support for renewable energy and energy efficiency—can produce a different combination of welfare and environmental outcomes. These are policy scenarios rather than measures already adopted by the EU. Their significance is analytical: a border charge, an exemption, and a targeted investment programme affect behaviour through different channels, even when presented as responses to the same concern.</p>
+    <p>Strategic responses are another important part of the story. Research on China considers retaliation, changes in the composition of exports, and resource shuffling. Such behaviour reflects firms&#x27; and governments&#x27; attempts to protect competitiveness within the constraints they face. A change that benefits an individual exporter or trading partner does not necessarily improve aggregate emissions, and a more stringent border rule does not automatically create the strongest incentive for decarbonisation everywhere. These questions require analysis of general-equilibrium adjustments rather than an assumption that import substitution is equivalent to an emissions reduction.</p>
+    <h3>The next test is policy performance, not policy symbolism</h3>
+    <p>The practical debate is already moving beyond initial implementation. EU institutions are considering extending CBAM to selected downstream products and strengthening anti-circumvention measures; as of October 2026, that extension remains a legislative proposal rather than an adopted expansion. The concern is economically plausible: a measure applied to basic materials can shift incentives towards importing products further along the value chain. Yet broadening coverage also changes compliance costs and trade exposure, so the net consequences deserve careful assessment.</p>
+    <p>A rigorous evaluation should therefore ask several questions at once. Does CBAM lower global emissions or merely alter where clean and carbon-intensive output is sold? Who captures the competitiveness benefits, and who bears adjustment costs? How do responses differ between large industrial economies and exporters with limited technological or administrative capacity? What happens to households and downstream industries when input costs change? These questions do not presuppose that CBAM is either a success or a failure. They recognise that its economic effects cannot be read directly from its stated objective.</p>
+    <p>The most useful contribution of economic analysis is to reveal these mechanisms and trade-offs, including outcomes that do not fit a simple narrative of winners and losers. The climate case for a border adjustment ultimately rests on what happens to emissions and production across the wider economy, not merely on the existence of a carbon charge at Europe&#x27;s frontier.</p>
+  </div>
+  <div class="references">
+    <h3>Sources &amp; related research</h3>
+    <p class="references-note">Policy facts are drawn from official EU sources; interpretations of economic mechanisms draw on published and ongoing research. Linked studies provide the evidence behind the discussion.</p>
+    <ol>
+      <li><a href="https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism/cbam-definitive-regime_en" target="_blank" rel="noopener noreferrer">Definitive regime and operational rules</a><span>European Commission, Taxation and Customs Union</span></li>
+      <li><a href="https://taxation-customs.ec.europa.eu/news/webinar-follow-cbam-policy-practice-emissions-calculation-declarations-and-certificates-2026-09-30_en" target="_blank" rel="noopener noreferrer">First CBAM compliance timetable</a><span>European Commission, 30 September 2026</span></li>
+      <li><a href="https://www.consilium.europa.eu/en/press/press-releases/2026/06/12/council-moves-to-strengthen-the-eu-s-carbon-border-adjustment-mechanism/" target="_blank" rel="noopener noreferrer">Downstream extension: proposal under negotiation</a><span>Council of the EU, 12 June 2026</span></li>
+      <li><a href="https://doi.org/10.1080/14693062.2023.2277405" target="_blank" rel="noopener noreferrer">Published research: Brazil&#x27;s energy-intensive industries</a><span>Perdana, Vielle &amp; Oliveira, Climate Policy (2023)</span></li>
+      <li><a href="https://doi.org/10.1016/j.enpol.2022.113245" target="_blank" rel="noopener noreferrer">Published research: CBAM and least developed countries</a><span>Perdana &amp; Vielle, Energy Policy (2022)</span></li>
+      <li><a href="https://doi.org/10.1007/s10290-026-00635-6" target="_blank" rel="noopener noreferrer">Published research: China&#x27;s strategic responses</a><span>Perdana, Vielle &amp; Li, Review of World Economics (2026)</span></li>
+    </ol>
+  </div>
+  <div class="essay-end"><a href="#top">Back to Perspectives ↑</a></div>
+</article>
+
+        <p class="disclaimer">Editorial note · Policy and implementation information is current as of 28 October 2026. Model-based findings describe the scenarios examined in the cited research; they should not be read as forecasts for subsequent legislation. Views expressed here are the author's and do not represent an institutional position.</p>
     </main>
 
     <footer class="site-footer">
-        <div class="container">© Sigit Perdana · <a href="index.html">Back to About</a></div>
+        <div class="container">© Sigit Perdana · <a href="index.html">Back to About</a> · <a href="publications.html">Research Publications</a></div>
     </footer>
 </body>
 </html>
